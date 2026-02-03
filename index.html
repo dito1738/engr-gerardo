@@ -1,224 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Gerardo Rios</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Home - Gerardo Rios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     
     <style>
-        /* Navbar fix so it doesn't cover content */
-        body { padding-top: 56px; }
-
-        .hero-section {
-            background: linear-gradient(135deg, #0d6efd 0%, #0043a8 100%);
-            color: white;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            padding-top: 56px;
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #0d6efd, #0043a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-section {
             padding: 100px 0;
-        }
-        /* Makes the name huge and bold */
-        .big-name {
-            font-size: 5rem; 
-            font-weight: 800;
-            letter-spacing: -2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .skill-card {
-            transition: transform 0.2s;
-        }
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-        .resume-section {
-            background-color: #f8f9fa;
-            border-top: 5px solid #0d6efd;
-        }
-        /* Placeholder for Project Images */
-        .project-img-placeholder {
-            height: 200px;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6c757d;
-            font-weight: bold;
+            background-color: #fff;
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="d-flex flex-column h-100 bg-light">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Gerardo Rios</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <div class="container px-5">
+            <a class="navbar-brand fw-bold" href="index.html">Gerardo Rios</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center">
-        <div class="container">
-            <h1 class="big-name mb-3">Gerardo Rios</h1>
-            <p class="lead fs-3 mb-4 opacity-75">Business & Economics Major | Transitioning to Engineering</p>
-            
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#projects" class="btn btn-light btn-lg fw-bold text-primary">
-                    <i class="bi bi-gear-fill"></i> View Projects
-                </a>
-                <a href="#resume" class="btn btn-outline-light btn-lg fw-bold">
-                    <i class="bi bi-file-earmark-person"></i> View Resume
-                </a>
+    <header class="header-section">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="text-center text-lg-start">
+                        <h1 class="display-3 fw-bolder mb-3"><span class="text-gradient d-inline">Gerardo Rios</span></h1>
+                        <p class="lead fw-normal text-muted mb-4">Business & Economics Major transitioning into Engineering. Exploring the intersection of strategic planning and rapid prototyping.</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="projects.html">View My Projects</a>
+                            <a class="btn btn-outline-dark btn-lg px-4" href="#resume">My Resume</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img class="img-fluid rounded-circle shadow-lg" src="https://dummyimage.com/400x400/dee2e6/6c757d.jpg" alt="..." />
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="skills" class="container py-5 mt-4">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Technical Proficiency</h2>
-            <p class="text-muted">Bridging Business Strategy with Engineering Tools</p>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-5">
-                <div class="card h-100 shadow-sm border-0 skill-card p-4">
-                    <h4 class="text-primary mb-3"><i class="bi bi-gear-wide-connected"></i> Engineering & Design</h4>
-                    
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between fw-bold">
-                            <span>TinkerCAD / 3D Modeling</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between fw-bold">
-                            <span>PrusaSlicer / G-Code</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-0">
-                        <div class="d-flex justify-content-between fw-bold">
-                            <span>Python Scripting</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 65%"></div>
-                        </div>
-                    </div>
-                </div>
+    <section class="py-5 bg-white">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bolder">Technical Proficiency</h2>
+                <p class="lead fw-normal text-muted mb-0">My Core Competencies</p>
             </div>
-
-            <div class="col-md-5">
-                <div class="card h-100 shadow-sm border-0 skill-card p-4">
-                    <h4 class="text-primary mb-3"><i class="bi bi-lightning-charge"></i> Power Skills</h4>
-                    <div class="d-flex flex-wrap gap-2 align-content-center">
-                        <span class="badge bg-secondary p-2">Strategic Planning</span>
-                        <span class="badge bg-secondary p-2">Team Leadership</span>
-                        <span class="badge bg-secondary p-2">Bilingual (Eng/Esp)</span>
-                        <span class="badge bg-secondary p-2">Excel Certified</span>
-                        <span class="badge bg-secondary p-2">Data Analysis</span>
-                    </div>
-                    <p class="mt-3 text-muted small">Leveraging a background in leadership (Posse Scholar) and advocacy to drive technical projects.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="bg-light py-5">
-        <div class="container">
-            <h2 class="fw-bold mb-4 border-bottom pb-2">Engineering Projects</h2>
-            <div class="row g-4">
-                
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 skill-card">
-                        <div class="project-img-placeholder">
-                            <i class="bi bi-box-seam fs-1"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">3D Modeling Prototype</h5>
-                            <p class="card-text text-muted small">Designed a functional prototype using TinkerCAD and optimized print settings in PrusaSlicer for reduced material waste.</p>
-                            <span class="badge bg-primary">TinkerCAD</span>
-                            <span class="badge bg-dark">3D Printing</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 skill-card">
-                        <div class="project-img-placeholder">
-                            <i class="bi bi-code-square fs-1"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Python Data Automation</h5>
-                            <p class="card-text text-muted small">Created a Python script to automate data entry for business logistics, reducing manual error by 40%.</p>
-                            <span class="badge bg-warning text-dark">Python</span>
-                            <span class="badge bg-success">Automation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0 skill-card">
-                        <div class="project-img-placeholder">
-                            <i class="bi bi-bar-chart-fill fs-1"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Campus Advocacy Data Analysis</h5>
-                            <p class="card-text text-muted small">Used Excel pivot tables to analyze student survey data, leading to a policy change proposal as an Enact Fellow.</p>
-                            <span class="badge bg-success">Excel</span>
-                            <span class="badge bg-secondary">Data Analysis</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="resume" class="resume-section py-5 mt-5 text-center">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="fw-bold mb-3">Professional Experience</h2>
-                    <p class="lead text-muted mb-4">
-                        My background includes the <strong>Posse Foundation Full-Tuition Scholarship</strong>, 
-                        experience as an <strong>Enact Research Fellow</strong>, and various leadership roles at Brandeis University.
-                    </p>
-                    
-                    <div class="card p-4 shadow-sm d-inline-block text-start bg-white">
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-file-earmark-pdf-fill text-danger fs-1 me-3"></i>
-                            <div>
-                                <h5 class="mb-0 fw-bold">Gerardo Rios - Resume.pdf</h5>
-                                <small class="text-muted">Updated Feb 2026</small>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
+                                    <h4 class="fw-bold"><i class="bi bi-gear-fill text-primary"></i> Engineering</h4>
+                                    <hr>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill text-primary"></i> TinkerCAD / 3D Modeling</li>
+                                        <li><i class="bi bi-check-circle-fill text-primary"></i> PrusaSlicer / G-Code</li>
+                                        <li><i class="bi bi-check-circle-fill text-primary"></i> Python Scripting</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <a href="resume.pdf" class="btn btn-primary ms-4" download>
-                                <i class="bi bi-download"></i> Download
-                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-0">© 2026 Gerardo Rios. Built with Bootstrap 5.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow border-0">
+                                <div class="card-body p-4">
