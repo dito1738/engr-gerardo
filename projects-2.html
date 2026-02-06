@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Project 2 - Gerardo Rios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            padding-top: 56px;
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #0d6efd, #0043a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Styling for code snippets if you need them */
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container px-5">
+            <a class="navbar-brand fw-bold" href="index.html">Gerardo Rios</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><h6 class="dropdown-header">Fall 2024</h6></li>
+                            <li><a class="dropdown-item" href="projects.html"><strong>Project 1:</strong> 3D Printing</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Spring 2025</h6></li>
+                            <li><a class="dropdown-item" href="project-2.html"><strong>Project 2:</strong> Data & Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#resume">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+                
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="sticky-top" style="top: 100px;"> <h2 class="fw-bolder mb-4">Project Title Goes Here</h2>
+                        
+                        <div class="card bg-white shadow-sm border-0 mb-4">
+                            <div class="card-body">
+                                <h5 class="fw-bold mb-3">Project Details</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><strong>Role:</strong> Project Lead / Analyst</li>
+                                    <li class="mb-2"><strong>Date:</strong> Spring 2025</li>
+                                    <li class="mb-2"><strong>Context:</strong> Engineering Course 101</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white shadow-sm border-0 mb-4">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 me-3"><i class="bi bi-tools p-2"></i></div>
+                                    <h5 class="fw-bold mb-0">Tools Used</h5>
+                                </div>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Python / Pandas</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Microsoft Excel</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>SolidWorks</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <article>
+                        <figure class="mb-4">
+                            <img class="img-fluid rounded shadow" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="Project Banner Image" />
+                            <figcaption class="figure-caption text-center mt-2">Figure 1: Final output or diagram of the project.</figcaption>
+                        </figure>
+                        
+                        <section class="mb-5">
+                            <h3 class="fw-bolder mb-3">Executive Summary</h3>
+                            <p class="fs-5 mb-4 text-muted">A one-paragraph overview. Example: "This project explores the efficiency of automated sorting systems. By utilizing Python scripts to analyze 500+ data points, I identified a 15% potential increase in throughput."</p>
+                            
+                            <hr class="my-5">
+
+                            <h4 class="fw-bold mb-3">1. The Challenge</h4>
+                            <p class="mb-4">Describe the problem here. What were you trying to solve? Why was it difficult?</p>
+                            <ul>
+                                <li>Constraint A: Limited budget</li>
+                                <li>Constraint B: Strict time limit</li>
+                                <li>Constraint C: High accuracy required</li>
+                            </ul>
+
+                            <h4 class="fw-bold mb-3 mt-5">2. The Methodology</h4>
+                            <p class="mb-4">How did you approach it? Did you start with a sketch? A spreadsheet?</p>
+                            
+                            <p>I used the following logic to filter the data:</p>
+<pre>
+def calculate_efficiency(input_data):
+    # This function normalizes the input 
+    return input_data * 1.5
+</pre>
+
+                            <h4 class="fw-bold mb-3 mt-5">3. Results & Reflection</h4>
+                            <p class="mb-4">What was the final outcome? If you were to do this project again, what would you change? This section shows "Growth Mindset" which employers love.</p>
+                        </section>
+                    </article>
+
+                    <div class="d-flex justify-content-center mt-5">
+                        <a class="btn btn-outline-primary btn-lg px-5 rounded-pill" href="projects.html">
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Back to Project 1 (3D Prints)
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container px-5">
+            <p class="mb-0">© 2024 Gerardo Rios. Built with Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
