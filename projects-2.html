@@ -16,7 +16,7 @@
         .text-gradient {
             background: linear-gradient(45deg, #0d6efd, #0043a8);
             -webkit-background-clip: text;
-            background-clip: text;          
+            background-clip: text; /* This fixes the yellow warning! */
             -webkit-text-fill-color: transparent;
         }
         pre {
@@ -62,14 +62,14 @@
                 
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="sticky-top" style="top: 100px;">
-                        <h2 class="fw-bolder mb-4">Daily Life "Micro-Upgrade"</h2>
+                        <h2 class="fw-bolder mb-4">The Headphone Hook Upgrade</h2>
                         
                         <div class="card bg-white shadow-sm border-0 mb-4">
                             <div class="card-body">
                                 <h5 class="fw-bold mb-3">Project Scope</h5>
                                 <ul class="list-unstyled mb-0">
-                                    <li class="mb-2"><strong>Goal:</strong> Fix a daily annoyance</li>
-                                    <li class="mb-2"><strong>Method:</strong> Remixing Public Models</li>
+                                    <li class="mb-2"><strong>Goal:</strong> Declutter Desk Space</li>
+                                    <li class="mb-2"><strong>Method:</strong> Remixing & Parametric CAD</li>
                                     <li class="mb-2"><strong>Date:</strong> Spring 2026</li>
                                 </ul>
                             </div>
@@ -95,19 +95,19 @@
                 <div class="col-lg-8">
                     <article>
                         <figure class="mb-4">
-                            <img class="img-fluid rounded shadow" src="assets/final-remix.jpg" alt="Final 3D Print Result" />
-                            <figcaption class="figure-caption text-center mt-2">Figure 1: The final 3D printed solution.</figcaption>
+                            <img class="img-fluid rounded shadow" src="assets/headphone_hook_3dmodel.png" alt="Final Headphone Hook Design" />
+                            <figcaption class="figure-caption text-center mt-2">Figure 1: The final Headphone Hook designed in OnShape.</figcaption>
                         </figure>
                         
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">1. The "Daily Annoyance"</h3>
                             <p class="fs-5 mb-4 text-muted">
-                                I identified a recurring problem in my daily routine: [DESCRIBE PROBLEM HERE]. 
+                                I identified a recurring problem in my daily routine: my headphones were constantly cluttering my desk or falling on the floor.
                             </p>
-                            <p>To solve this, I applied the <strong>Systematic Inventive Thinking (SIT)</strong> pattern of [INSERT PATTERN: e.g., Task Unification]. My goal was to create a device that [EXPLAIN GOAL].</p>
+                            <p>To solve this, I applied the <strong>Systematic Inventive Thinking (SIT)</strong> pattern of <strong>Task Unification</strong>. My goal was to create a device that uses the desk itself to hold the headphones, without needing screws or permanent adhesive.</p>
                             
                             <div class="text-center my-4">
-                                <img class="img-fluid rounded border" src="assets/sketch.jpg" alt="Initial Paper Sketch" style="max-width: 80%;">
+                                <img class="img-fluid rounded border" src="assets/headphonehook_sketch.png" alt="Initial Paper Sketch" style="max-width: 80%;">
                                 <p class="small text-muted mt-2">Initial Concept Sketch</p>
                             </div>
                         </section>
@@ -116,14 +116,14 @@
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">2. Phase 1: The Tinkercad Remix</h3>
-                            <p class="mb-4">I started by finding existing 3D models on Thangs/Thingiverse. I imported [NAME OF MODEL 1] and [NAME OF MODEL 2] into Tinkercad.</p>
+                            <p class="mb-4">I started by finding existing 3D models of clamps and hooks. I imported these into Tinkercad to create a quick "looks-like" prototype.</p>
                             
                             <h5 class="fw-bold">Process & Challenges</h5>
-                            <p>I used Tinkercad's boolean operations (grouping holes and solids) to combine these meshes. One challenge I faced was [DESCRIBE A CHALLENGE, e.g., high polygon count requiring MeshLab].</p>
+                            <p>I used Tinkercad's boolean operations (grouping holes and solids) to combine the mesh of a standard clamp with a hook geometry. This first iteration helped me understand the sizing requirements for my desk.</p>
 
                             <figure class="mb-4">
-                                <img class="img-fluid rounded shadow" src="assets/tinkercad-design.jpg" alt="Tinkercad Design View" />
-                                <figcaption class="figure-caption text-center mt-2">The design process in Tinkercad.</figcaption>
+                                <img class="img-fluid rounded shadow" src="assets/first_iteration_3dmodel.png" alt="Tinkercad Design View" />
+                                <figcaption class="figure-caption text-center mt-2">The first iteration created in Tinkercad.</figcaption>
                             </figure>
                         </section>
 
@@ -131,14 +131,14 @@
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">3. Phase 2: The OnShape Upgrade</h3>
-                            <p class="mb-4">After testing the Tinkercad print, I realized I could improve the design by [EXPLAIN IMPROVEMENT]. I moved to <strong>OnShape</strong> to use parametric modeling.</p>
+                            <p class="mb-4">After testing the Tinkercad print, I realized I needed a stronger, more precise mechanism. I moved to <strong>OnShape</strong> to use parametric modeling.</p>
                             
                             <h5 class="fw-bold">Why OnShape?</h5>
-                            <p>Unlike Tinkercad's drag-and-drop mesh editing, OnShape allowed me to define exact dimensions and constraints. This resulted in a cleaner, more precise geometry.</p>
+                            <p>Unlike Tinkercad's drag-and-drop mesh editing, OnShape allowed me to define exact dimensions for the clamping screw.</p>
 
                             <figure class="mb-4">
-                                <img class="img-fluid rounded shadow" src="assets/onshape-design.jpg" alt="OnShape Design View" />
-                                <figcaption class="figure-caption text-center mt-2">Refining the model in OnShape.</figcaption>
+                                <img class="img-fluid rounded shadow" src="assets/clamp_3dmodel.png" alt="OnShape Detail View" />
+                                <figcaption class="figure-caption text-center mt-2">Detailed view of the clamp mechanism in OnShape.</figcaption>
                             </figure>
                         </section>
 
@@ -153,29 +153,26 @@
                                         <ul class="small mb-0 list-unstyled">
                                             <li><strong>Printer:</strong> Prusa MINI+</li>
                                             <li><strong>Material:</strong> PLA</li>
-                                            <li><strong>Supports:</strong> [Yes/No]</li>
+                                            <li><strong>Supports:</strong> No (Designed for printability)</li>
                                             <li><strong>Infill:</strong> 15% (Grid)</li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mt-3 mt-md-0">
-                                    <p class="small">I sliced the model using PrusaSlicer. I oriented the part to minimize supports and ensure bed adhesion.</p>
+                                    <p class="small">I sliced the model using PrusaSlicer. I oriented the part to minimize supports and ensure the clamp screw threads were printed vertically for strength.</p>
                                 </div>
                             </div>
-                            <div class="mt-3">
-                                <img class="img-fluid rounded border" src="assets/slicer-settings.jpg" alt="PrusaSlicer Settings">
-                            </div>
-                        </section>
+                            </section>
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">5. Reflection: Tinkercad vs. OnShape</h3>
                             <p>Comparing the two tools, I found that:</p>
                             <ul>
-                                <li><strong>Tinkercad</strong> is excellent for [YOUR OPINION, e.g., quick bashing of existing STLs], but it lacks precision for complex assemblies.</li>
-                                <li><strong>OnShape</strong> has a steeper learning curve, but the parametric timeline allowed me to go back and edit dimensions without restarting the whole model.</li>
+                                <li><strong>Tinkercad</strong> was excellent for quickly bashing together the idea to see if the hook shape looked right.</li>
+                                <li><strong>OnShape</strong> was necessary for the mechanical parts (the screw and clamp) because I needed precise tolerances so the parts would fit together.</li>
                             </ul>
                             <p class="fw-bold mt-4">Did I solve the annoyance?</p>
-                            <p>Yes. The final print successfully [DESCRIBE SUCCESS]. If I were to do this again, I would [DESCRIBE ONE CHANGE].</p>
+                            <p>Yes. The final print successfully holds my headphones off the desk. If I were to do this again, I would increase the thickness of the screw handle for better grip.</p>
                         </section>
 
                     </article>
