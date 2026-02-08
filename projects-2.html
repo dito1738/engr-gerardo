@@ -19,11 +19,11 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        pre {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
+        /* CAROUSEL FIX: Keeps images the same height so page doesn't jump */
+        .carousel-item img {
+            height: 500px;
+            object-fit: contain;
+            background-color: #f8f9fa; /* Light grey background for empty space */
         }
     </style>
 </head>
@@ -91,101 +91,143 @@
                     </div>
                 </div>
 
-<div class="col-lg-8">
-    <article>
-        
-        <section class="mb-5">
-            <h3 class="fw-bolder mb-3">The "Daily Annoyance"</h3>
-            <p class="fs-5 mb-4 text-muted">
-                I identified a recurring problem in my daily routine: my headphones were constantly cluttering my desk or my room in general because they had no dedicated place.
-            </p>
-            <p>To solve this, I applied the <strong>Task Unification</strong> pattern. My goal was to use a clamping mechanism to hold the headphones anywhere on my desk and any size desk I am working on.</p>
-            
-            <div class="row align-items-center my-4 border rounded p-3 bg-white shadow-sm">
-                <div class="col-md-6">
-                    <img class="img-fluid rounded border" src="assets/headphonehook_sketch.png" alt="Initial Paper Sketch">
-                    <p class="small text-muted text-center mt-2 mb-0">Figure 1: Initial Concept Sketch</p>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="fw-bold mt-3 mt-md-0">Design Thinking</h5>
-                    <p class="medium mb-0">
-                        Before using CAD, I sketched the what I had in mind to map out what I needed:
-                    </p>
-                    <ul class="medium mb-0 mt-2">
-                        <li><strong>Surface Area:</strong> Holding my headphones with ease, while not taking up too much space.</li>
-                        <li><strong>Universal Fit:</strong> Ensuring the final print fits most desks and the mechanism worked.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+                <div class="col-lg-8">
+                    <article>
+                        
+                        <section class="mb-5">
+                            <h3 class="fw-bolder mb-3">The "Daily Annoyance"</h3>
+                            <p class="fs-5 mb-4 text-muted">
+                                I identified a recurring problem in my daily routine: my headphones were constantly cluttering my desk or my room in general because they had no dedicated place.
+                            </p>
+                            <p>To solve this, I applied the <strong>Task Unification</strong> pattern. My goal was to use a clamping mechanism to hold the headphones anywhere on my desk and any size desk I am working on.</p>
+                            
+                            <div class="row align-items-center my-4 border rounded p-3 bg-white shadow-sm">
+                                <div class="col-md-6">
+                                    <img class="img-fluid rounded border" src="assets/headphonehook_sketch.png" alt="Initial Paper Sketch">
+                                    <p class="small text-muted text-center mt-2 mb-0">Figure 1: Initial Concept Sketch</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="fw-bold mt-3 mt-md-0">Design Thinking</h5>
+                                    <p class="medium mb-0">
+                                        Before using CAD, I sketched what I had in mind to map out what I needed:
+                                    </p>
+                                    <ul class="medium mb-0 mt-2">
+                                        <li><strong>Surface Area:</strong> Holding my headphones with ease, while not taking up too much space.</li>
+                                        <li><strong>Universal Fit:</strong> Ensuring the final print fits most desks and the mechanism worked.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
 
-        <hr class="my-5">
+                        <hr class="my-5">
 
-        <section class="mb-5">
-            <h3 class="fw-bolder mb-3">Phase 1: The Tinkercad Remix</h3>
-            <p class="mb-4">I started by trying to make my own clamp system by finding the screw shape(hole) and grouping it to a rectangle shape to create a hole within the rectangle. The manual way took too long and I could not the proper way to continue. I then asked the professor for guidance and he said that I could just find the models online and remix those. Wiht that new information, I went on to find some existing 3D models of clamps and hooks. I then imported what I found these into Tinkercad to create a quick prototype along with some designs of my own to find the best orienation.</p>
-            
-            <figure class="mb-4">
-                <img class="img-fluid rounded shadow" src="assets/headphoneclampV1.jpg" alt="Tinkercad Design View" />
-                <figcaption class="figure-caption text-center mt-2">Figure 2: First iteration created in Tinkercad.</figcaption>
-            </figure>
+                        <section class="mb-5">
+                            <h3 class="fw-bolder mb-3">Phase 1: The Tinkercad Remix</h3>
+                            <p class="mb-4">I started by trying to make my own clamp system by finding the screw shape (hole) and grouping it to a rectangle shape to create a hole within the rectangle. The manual way took too long. I asked the professor for guidance, and he suggested remixing existing models. With that information, I found existing 3D models of clamps and hooks.</p>
+                            
+                            <div class="alert alert-info d-flex align-items-center mb-4" role="alert">
+                                <i class="bi bi-info-circle-fill me-3 fs-4"></i>
+                                <div>
+                                    <strong>Remix Source:</strong> This design is a remix of public models found on Thangs/Thingiverse.
+                                </div>
+                            </div>
 
-            <h5 class="fw-bold">Process & Challenges</h5>
-            <p>The hardest challenge for this phase was finding the right way to attach the clamp and the hook. Right before printing I realized that I needed to equally change the sizes of the clamp mechanism if I changed the size of the hook. Luckily I made that realization before committing to a print, but I believe that even if I printed it wrong it would have been a well taught lesson in changing things properly. With that in mind, I moved on to the OnShape Upgrade.</p>
-        </section>
+                            <figure class="mb-4">
+                                <img class="img-fluid rounded shadow" src="assets/headphoneclampV1.jpg" alt="Tinkercad Design View" />
+                                <figcaption class="figure-caption text-center mt-2">Figure 2: First iteration created in Tinkercad.</figcaption>
+                            </figure>
 
-        <hr class="my-5">
+                            <h5 class="fw-bold">Process & Challenges</h5>
+                            <p>The hardest challenge for this phase was finding the right way to attach the clamp and the hook. Right before printing, I realized that I needed to equally change the sizes of the clamp mechanism if I changed the size of the hook. Luckily I made that realization before committing to a print. With that in mind, I moved on to the OnShape Upgrade.</p>
+                        </section>
 
-        <section class="mb-5">
-            <h3 class="fw-bolder mb-3">Phase 2: The OnShape Upgrade</h3>
-            <p class="mb-4">After testing the Tinkercad print, I realized I needed to make  the clamp base and width larger because it was was too fragile. The more I tightened the bolt the more the print would bend. I then exported the file from TinkerCad to <strong>OnShape</strong> in order to make some improvements.</p>
-            
-            <figure class="mb-4">
-                <img class="img-fluid rounded shadow" src="assets/onshape_final_headphone_hook.png" alt="OnShape Detail View" />
-                <figcaption class="figure-caption text-center mt-2">Figure 3: Detailed view of the final clamp mechanism in OnShape.</figcaption>
-            </figure>
+                        <hr class="my-5">
 
-            <h5 class="fw-bold">OnShape Process</h5>
-            <p>Unlike Tinkercad's drag-and-drop editing, OnShape allowed me to define exact dimensions for the clamping screw along with more detaile sections It was tough at first, but the headphone hook model was not too difficult to improve upon given the tools from OnShape. Luckily the first tutorial we had to watch about making the tray introduced me to the right tools I needed to make the imrpovements for the final design.</p>
-            <p>The tutorial for the OnShape tray can be access <a href="https://youtu.be/l_3k1qMq9AI">here</a>.</p>        </section>
+                        <section class="mb-5">
+                            <h3 class="fw-bolder mb-3">Phase 2: The OnShape Upgrade</h3>
+                            <p class="mb-4">After testing the Tinkercad print, I realized I needed to make the clamp base and width larger because it was too fragile. The more I tightened the bolt the more the print would bend. I then exported the file from Tinkercad to <strong>OnShape</strong> in order to make some improvements.</p>
+                            
+                            <figure class="mb-4">
+                                <img class="img-fluid rounded shadow" src="assets/onshape_final_headphone_hook.png" alt="OnShape Detail View" />
+                                <figcaption class="figure-caption text-center mt-2">Figure 3: Detailed view of the final clamp mechanism in OnShape.</figcaption>
+                            </figure>
 
-        <hr class="my-5">
+                            <h5 class="fw-bold">OnShape Process</h5>
+                            <p>Unlike Tinkercad's drag-and-drop editing, OnShape allowed me to define exact dimensions for the clamping screw. It was tough at first, but the headphone hook model was not too difficult to improve upon given the tools from OnShape. Luckily, the first tutorial we had to watch about making the tray introduced me to the right tools I needed.</p>
+                            <p>The tutorial for the OnShape tray can be accessed <a href="https://youtu.be/l_3k1qMq9AI" target="_blank">here</a>.</p>        
+                        </section>
 
-        <section class="mb-5">
-            <h3 class="fw-bolder mb-3">Slicing & Printing</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="p-3 border rounded bg-light">
-                        <h6 class="fw-bold">Print Settings</h6>
-                        <ul class="small mb-0 list-unstyled">
-                            <li><strong>Printer:</strong> Prusa MINI+</li>
-                            <li><strong>Material:</strong> PLA</li>
-                            <li><strong>Supports:</strong> No (Designed for printability)</li>
-                            <li><strong>Infill:</strong> 15% (Grid)</li>
-                        </ul>
+                        <hr class="my-5">
+
+                        <section class="mb-5">
+                            <h3 class="fw-bolder mb-3">Slicing & Printing</h3>
+                            
+                            <div id="printComparisonCarousel" class="carousel slide mb-4 shadow rounded" data-bs-theme="dark">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#printComparisonCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#printComparisonCarousel" data-bs-slide-to="1"></button>
+                                </div>
+
+                                <div class="carousel-inner rounded">
+                                    <div class="carousel-item active" data-bs-interval="false">
+                                        <img src="assets/headhookv1print.jpg" class="d-block w-100" alt="V1 Print from Tinkercad">
+                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
+                                            <h5 class="fw-bold">Phase 1: Tinkercad Print</h5>
+                                            <p class="mb-2">The initial prototype verifying the fit.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="false">
+                                        <img src="assets/headhookv2print.jpg" class="d-block w-100" alt="V2 Print from OnShape">
+                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
+                                            <h5 class="fw-bold">Phase 2: OnShape Print</h5>
+                                            <p class="mb-2">The final robust version.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#printComparisonCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#printComparisonCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <figcaption class="figure-caption text-center mt-2 mb-4">Figure 4: Use the arrows to compare the V1 vs V2 prints.</figcaption>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded bg-light">
+                                        <h6 class="fw-bold">Print Settings</h6>
+                                        <ul class="small mb-0 list-unstyled">
+                                            <li><strong>Printer:</strong> Prusa MINI+</li>
+                                            <li><strong>Material:</strong> PLA</li>
+                                            <li><strong>Supports:</strong> No (Designed for printability)</li>
+                                            <li><strong>Infill:</strong> 15% (Grid)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-3 mt-md-0">
+                                    <p class="small">I sliced the model using PrusaSlicer. I oriented the part to minimize supports and ensure the clamp screw threads were printed vertically for strength.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h3 class="fw-bolder mb-3">Reflection</h3>
+                            <p>The final print successfully holds my headphones off the desk. If I were to do this again, I would find a way to make it less clunky and simplify the entire model. Overall, this particular project taught me a lot of patience when it comes to making sure everything is close to 100% before printing to minimize time wasted. However, I did learn that it is okay if the print does not come out perfect because that is a learning opportunity.</p>
+                        </section>
+
+                    </article>
+
+                    <div class="d-flex justify-content-center mt-5">
+                        <a class="btn btn-outline-primary btn-lg px-5 rounded-pill" href="projects.html">
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Back to Project 1 (3D Prints)
+                        </a>
                     </div>
+
                 </div>
-                <div class="col-md-6 mt-3 mt-md-0">
-                    <p class="small">I sliced the model using PrusaSlicer. I oriented the part to minimize supports and ensure the clamp screw threads were printed vertically for strength.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-5">
-            <h3 class="fw-bolder mb-3">Reflection</h3>
-            <p>The final print successfully holds my headphones off the desk and the final orientation works with the . If I were to do this again, I would find way to make it less clunky and simplify the entire model Overall, this particular project taught me a lot of patience when it comes to making sure everytyhing is close to 100% before printing to minimze the time wasted. However, I did learn that it is okay if the print does not come out perfect because all that is called a learning opportunity. I was glad it only took me max one print before making the final print after and have it work the way I intended.</p>
-        </section>
-
-    </article>
-
-    <div class="d-flex justify-content-center mt-5">
-        <a class="btn btn-outline-primary btn-lg px-5 rounded-pill" href="projects.html">
-            <i class="bi bi-arrow-left me-2"></i>
-            Back to Project 1 (3D Prints)
-        </a>
-    </div>
-
-</div>
             </div>
         </div>
     </section>
