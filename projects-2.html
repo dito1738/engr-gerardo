@@ -19,11 +19,35 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        /* CAROUSEL FIX: Keeps images the same height so page doesn't jump */
+        
+        /* --- CAROUSEL FIXES --- */
+        
+        /* 1. Keep images same height */
         .carousel-item img {
             height: 500px;
             object-fit: contain;
-            background-color: #f8f9fa; /* Light grey background for empty space */
+            background-color: #f8f9fa; 
+        }
+
+        /* 2. AUTO-FADE CAPTIONS */
+        .carousel-caption {
+            /* Wait 3 seconds, then fade out over 1.5 seconds */
+            animation: fadeOutCaption 1.5s forwards; 
+            animation-delay: 3s; 
+            pointer-events: none; /* Lets you click "through" the box if needed */
+        }
+
+        /* 3. REVEAL ON HOVER (If user wants to read it again) */
+        .carousel-inner:hover .carousel-caption {
+            opacity: 1 !important;
+            animation: none; /* Stops the fading while hovering */
+            transition: opacity 0.3s;
+        }
+
+        /* The Animation Logic */
+        @keyframes fadeOutCaption {
+            from { opacity: 1; }
+            to { opacity: 0; }
         }
     </style>
 </head>
@@ -234,8 +258,20 @@
                         </section>
 
                         <section class="mb-5">
-                            <h3 class="fw-bolder mb-3">Reflection</h3>
-                            <p>The final print successfully holds my headphones off the desk. If I were to do this again, I would find a way to make it less clunky and simplify the entire model. Overall, this particular project taught me a lot of patience when it comes to making sure everything is close to 100% before printing to minimize time wasted. However, I did learn that it is okay if the print does not come out perfect because that is a learning opportunity.</p>
+                            <div class="row align-items-center">
+                                
+                                <div class="col-md-4">
+                                    <img class="img-fluid rounded shadow mb-3 mb-md-0" src="assets/headphonehookfinal.jpg" alt="Final Result">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <h3 class="fw-bolder mb-3">Reflection</h3>
+                                    <p class="mb-0">
+                                        The final print successfully holds my headphones off the desk. If I were to do this again, I would find a way to make it less clunky and simplify the entire model. Overall, this particular project taught me a lot of patience when it comes to making sure everything is close to 100% before printing to minimize time wasted. However, I did learn that it is okay if the print does not come out perfect because that is a learning opportunity.
+                                    </p>
+                                </div>
+
+                            </div>
                         </section>
 
                     </article>
