@@ -69,7 +69,7 @@
                                 <h5 class="fw-bold mb-3">Project Scope</h5>
                                 <ul class="list-unstyled mb-0">
                                     <li class="mb-2"><strong>Goal:</strong> Declutter Desk Space</li>
-                                    <li class="mb-2"><strong>Method:</strong> Remixing & Parametric CAD</li>
+                                    <li class="mb-2"><strong>Method:</strong> TinkerCad Remixing & OnShape Design</li>
                                     <li class="mb-2"><strong>Date:</strong> Spring 2026</li>
                                 </ul>
                             </div>
@@ -97,9 +97,9 @@
         <section class="mb-5">
             <h3 class="fw-bolder mb-3">The "Daily Annoyance"</h3>
             <p class="fs-5 mb-4 text-muted">
-                I identified a recurring problem in my daily routine: my headphones were constantly cluttering my desk or falling on the floor.
+                I identified a recurring problem in my daily routine: my headphones were constantly cluttering my desk or my room in general because they had no dedicated place.
             </p>
-            <p>To solve this, I applied the <strong>Task Unification</strong> pattern. My goal was to use the desk itself to hold the headphones via friction.</p>
+            <p>To solve this, I applied the <strong>Task Unification</strong> pattern. My goal was to use a clamping mechanism to hold the headphones anywhere on my desk and any size desk I am working on.</p>
             
             <div class="row align-items-center my-4 border rounded p-3 bg-white shadow-sm">
                 <div class="col-md-6">
@@ -108,12 +108,12 @@
                 </div>
                 <div class="col-md-6">
                     <h5 class="fw-bold mt-3 mt-md-0">Design Thinking</h5>
-                    <p class="small mb-0">
-                        Before using CAD, I sketched the mechanism to solve two constraints:
+                    <p class="medium mb-0">
+                        Before using CAD, I sketched the what I had in mind to map out what I needed:
                     </p>
-                    <ul class="small mb-0 mt-2">
-                        <li><strong>Clamping Force:</strong> Attaching without screws/glue.</li>
-                        <li><strong>Universal Fit:</strong> Ensuring the hook fits my specific headphones.</li>
+                    <ul class="medium mb-0 mt-2">
+                        <li><strong>Surface Area:</strong> Holding my headphones with ease, while not taking up too much space.</li>
+                        <li><strong>Universal Fit:</strong> Ensuring the final print fits most desks and the mechanism worked.</li>
                     </ul>
                 </div>
             </div>
@@ -123,7 +123,7 @@
 
         <section class="mb-5">
             <h3 class="fw-bolder mb-3">Phase 1: The Tinkercad Remix</h3>
-            <p class="mb-4">I started by finding existing 3D models of clamps and hooks. I imported these into Tinkercad to create a quick "looks-like" prototype.</p>
+            <p class="mb-4">I started by trying to make my own clamp system by finding the screw shape(hole) and grouping it to a rectangle shape to create a hole within the rectangle. The manual way took too long and I could not the proper way to continue. I then asked the professor for guidance and he said that I could just find the models online and remix those. Wiht that new information, I went on to find some existing 3D models of clamps and hooks. I then imported what I found these into Tinkercad to create a quick prototype along with some designs of my own to find the best orienation.</p>
             
             <figure class="mb-4">
                 <img class="img-fluid rounded shadow" src="assets/headphoneclampV1.jpg" alt="Tinkercad Design View" />
@@ -131,23 +131,23 @@
             </figure>
 
             <h5 class="fw-bold">Process & Challenges</h5>
-            <p>**<strong>work on this this**</p>
+            <p>The hardest challenge for this phase was finding the right way to attach the clamp and the hook. Right before printing I realized that I needed to equally change the sizes of the clamp mechanism if I changed the size of the hook. Luckily I made that realization before committing to a print, but I believe that even if I printed it wrong it would have been a well taught lesson in changing things properly. With that in mind, I moved on to the OnShape Upgrade.</p>
         </section>
 
         <hr class="my-5">
 
         <section class="mb-5">
             <h3 class="fw-bolder mb-3">Phase 2: The OnShape Upgrade</h3>
-            <p class="mb-4">After testing the Tinkercad print, I realized I needed a stronger, more precise mechanism. I moved to <strong>OnShape</strong> to use parametric modeling.</p>
+            <p class="mb-4">After testing the Tinkercad print, I realized I needed to make  the clamp base and width larger because it was was too fragile. The more I tightened the bolt the more the print would bend. I then exported the file from TinkerCad to <strong>OnShape</strong> in order to make some improvements.</p>
             
             <figure class="mb-4">
                 <img class="img-fluid rounded shadow" src="assets/onshape_final_headphone_hook.png" alt="OnShape Detail View" />
                 <figcaption class="figure-caption text-center mt-2">Figure 3: Detailed view of the final clamp mechanism in OnShape.</figcaption>
             </figure>
 
-            <h5 class="fw-bold">Why OnShape?</h5>
-            <p>Unlike Tinkercad's drag-and-drop mesh editing, OnShape allowed me to define exact dimensions for the clamping screw.</p>
-        </section>
+            <h5 class="fw-bold">OnShape Process</h5>
+            <p>Unlike Tinkercad's drag-and-drop editing, OnShape allowed me to define exact dimensions for the clamping screw along with more detaile sections It was tough at first, but the headphone hook model was not too difficult to improve upon given the tools from OnShape. Luckily the first tutorial we had to watch about making the tray introduced me to the right tools I needed to make the imrpovements for the final design.</p>
+            <p>The tutorial for the OnShape tray can be access <a href="https://youtu.be/l_3k1qMq9AI">here</a>.</p>        </section>
 
         <hr class="my-5">
 
@@ -173,7 +173,7 @@
 
         <section class="mb-5">
             <h3 class="fw-bolder mb-3">Reflection</h3>
-            <p>The final print successfully holds my headphones off the desk and the final orientation works with the . If I were to do this again, I would increase the infill percentage to 20% instead of 15% becuase I noticed that if you tighten the clamp too much then the whole print starts to bend.</p>
+            <p>The final print successfully holds my headphones off the desk and the final orientation works with the . If I were to do this again, I would find way to make it less clunky and simplify the entire model Overall, this particular project taught me a lot of patience when it comes to making sure everytyhing is close to 100% before printing to minimze the time wasted. However, I did learn that it is okay if the print does not come out perfect because all that is called a learning opportunity. I was glad it only took me max one print before making the final print after and have it work the way I intended.</p>
         </section>
 
     </article>
