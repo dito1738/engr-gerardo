@@ -132,12 +132,39 @@
                                 </div>
                             </div>
 
-                            <figure class="mb-4">
-                                <img class="img-fluid rounded shadow" src="assets/headphoneclampV1.jpg" alt="Tinkercad Design View" />
-                                <figcaption class="figure-caption text-center mt-2">Figure 2: First iteration created in Tinkercad.</figcaption>
-                            </figure>
+                            <div id="tinkercadCarousel" class="carousel slide mb-4 shadow rounded" data-bs-theme="dark">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#tinkercadCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#tinkercadCarousel" data-bs-slide-to="1"></button>
+                                </div>
+                                <div class="carousel-inner rounded">
+                                    <div class="carousel-item active" data-bs-interval="false">
+                                        <img src="assets/headphoneclampV1.jpg" class="d-block w-100" alt="Tinkercad Design View">
+                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
+                                            <h5 class="fw-bold">Phase 1 CAD</h5>
+                                            <p class="mb-2">The design in Tinkercad.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="false">
+                                        <img src="assets/headhookv1print.jpg" class="d-block w-100" alt="Tinkercad V1 Print">
+                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
+                                            <h5 class="fw-bold">Phase 1 Print</h5>
+                                            <p class="mb-2">The physical result of the Tinkercad model.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#tinkercadCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#tinkercadCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <figcaption class="figure-caption text-center mt-2">Figure 2: Slide to see the Tinkercad Model and the V1 Print.</figcaption>
 
-                            <h5 class="fw-bold">Process & Challenges</h5>
+                            <h5 class="fw-bold mt-4">Process & Challenges</h5>
                             <p>The hardest challenge for this phase was finding the right way to attach the clamp and the hook. Right before printing, I realized that I needed to equally change the sizes of the clamp mechanism if I changed the size of the hook. Luckily I made that realization before committing to a print. With that in mind, I moved on to the OnShape Upgrade.</p>
                         </section>
 
@@ -147,12 +174,39 @@
                             <h3 class="fw-bolder mb-3">Phase 2: The OnShape Upgrade</h3>
                             <p class="mb-4">After testing the Tinkercad print, I realized I needed to make the clamp base and width larger because it was too fragile. The more I tightened the bolt the more the print would bend. I then exported the file from Tinkercad to <strong>OnShape</strong> in order to make some improvements.</p>
                             
-                            <figure class="mb-4">
-                                <img class="img-fluid rounded shadow" src="assets/onshape_final_headphone_hook.png" alt="OnShape Detail View" />
-                                <figcaption class="figure-caption text-center mt-2">Figure 3: Detailed view of the final clamp mechanism in OnShape.</figcaption>
-                            </figure>
+                            <div id="onshapeCarousel" class="carousel slide mb-4 shadow rounded" data-bs-theme="dark">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#onshapeCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#onshapeCarousel" data-bs-slide-to="1"></button>
+                                </div>
+                                <div class="carousel-inner rounded">
+                                    <div class="carousel-item active" data-bs-interval="false">
+                                        <img src="assets/onshape_final_headphone_hook.png" class="d-block w-100" alt="OnShape Detail View">
+                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
+                                            <h5 class="fw-bold">Phase 2 CAD</h5>
+                                            <p class="mb-2">The refined design in OnShape.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="false">
+                                        <img src="assets/headhookv2print.jpg" class="d-block w-100" alt="OnShape V2 Print">
+                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
+                                            <h5 class="fw-bold">Phase 2 Print</h5>
+                                            <p class="mb-2">The final robust version.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#onshapeCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#onshapeCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <figcaption class="figure-caption text-center mt-2">Figure 3: Slide to see the OnShape Model and the V2 Print.</figcaption>
 
-                            <h5 class="fw-bold">OnShape Process</h5>
+                            <h5 class="fw-bold mt-4">OnShape Process</h5>
                             <p>Unlike Tinkercad's drag-and-drop editing, OnShape allowed me to define exact dimensions for the clamping screw. It was tough at first, but the headphone hook model was not too difficult to improve upon given the tools from OnShape. Luckily, the first tutorial we had to watch about making the tray introduced me to the right tools I needed.</p>
                             <p>The tutorial for the OnShape tray can be accessed <a href="https://youtu.be/l_3k1qMq9AI" target="_blank">here</a>.</p>        
                         </section>
@@ -161,40 +215,6 @@
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">Slicing & Printing</h3>
-                            
-                            <div id="printComparisonCarousel" class="carousel slide mb-4 shadow rounded" data-bs-theme="dark">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#printComparisonCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                                    <button type="button" data-bs-target="#printComparisonCarousel" data-bs-slide-to="1"></button>
-                                </div>
-
-                                <div class="carousel-inner rounded">
-                                    <div class="carousel-item active" data-bs-interval="false">
-                                        <img src="assets/headhookv1print.jpg" class="d-block w-100" alt="V1 Print from Tinkercad">
-                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
-                                            <h5 class="fw-bold">Phase 1: Tinkercad Print</h5>
-                                            <p class="mb-2">The initial prototype verifying the fit.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="false">
-                                        <img src="assets/headhookv2print.jpg" class="d-block w-100" alt="V2 Print from OnShape">
-                                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3">
-                                            <h5 class="fw-bold">Phase 2: OnShape Print</h5>
-                                            <p class="mb-2">The final robust version.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button class="carousel-control-prev" type="button" data-bs-target="#printComparisonCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#printComparisonCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <figcaption class="figure-caption text-center mt-2 mb-4">Figure 4: Use the arrows to compare the V1 vs V2 prints.</figcaption>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="p-3 border rounded bg-light">
