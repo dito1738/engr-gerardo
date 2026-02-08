@@ -16,7 +16,7 @@
         .text-gradient {
             background: linear-gradient(45deg, #0d6efd, #0043a8);
             -webkit-background-clip: text;
-            background-clip: text; /* This fixes the yellow warning! */
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         pre {
@@ -91,99 +91,101 @@
                     </div>
                 </div>
 
-                <div class="col-lg-8">
-                    <article>
-                        <figure class="mb-4">
-                            <img class="img-fluid rounded shadow" src="assets/headphonehook_sketch.png" alt="First Headphone Hook Design" />
-                            <figcaption class="figure-caption text-center mt-2">First Image Concept In Tinkercad</figcaption>
-                        </figure>
-                        
-                        <section class="mb-5">
-                            <h3 class="fw-bolder mb-3">1. The "Daily Annoyance"</h3>
-                            <p class="fs-5 mb-4 text-muted">
-                                I identified a recurring problem in my daily routine: my headphones were constantly cluttering my desk or falling on the floor because they did not have a place to naturally rest.
-                            </p>
-                            <p>To solve this, I applied what we were taught about <strong>Systematic Inventive Thinking (SIT)</strong>, more specifically <strong>Task Unification</strong>. My goal was to create a device that uses the desk itself to hold the headphones, without needing screws or permanent adhesive.</p>
-                            
-                            <div class="text-center my-4">
-                                <img class="img-fluid rounded border" src="assets/headphone_clampV1.png" alt="Initial Paper Sketch" style="max-width: 80%;">
-                                <p class="small text-muted mt-2">Initial Concept Sketch</p>
-                            </div>
-                        </section>
-
-                        <hr class="my-5">
-
-                        <section class="mb-5">
-                            <h3 class="fw-bolder mb-3">2. Phase 1: The Tinkercad Remix</h3>
-                            <p class="mb-4">I started by finding existing 3D models of clamps and hooks. I imported these into Tinkercad to create a quick "looks-like" prototype.</p>
-                            
-                            <h5 class="fw-bold">Process & Challenges</h5>
-                            <p>I used Tinkercad's boolean operations (grouping holes and solids) to combine the mesh of a standard clamp with a hook geometry. This first iteration helped me understand the sizing requirements for my desk.</p>
-
-                            <figure class="mb-4">
-                                <img class="img-fluid rounded shadow" src="assets/first_iteration_3dmodel.png" alt="Tinkercad Design View" />
-                                <figcaption class="figure-caption text-center mt-2">The first iteration created in Tinkercad.</figcaption>
-                            </figure>
-                        </section>
-
-                        <hr class="my-5">
-
-                        <section class="mb-5">
-                            <h3 class="fw-bolder mb-3">3. Phase 2: The OnShape Upgrade</h3>
-                            <p class="mb-4">After testing the Tinkercad print, I realized I needed a stronger, more precise mechanism. I moved to <strong>OnShape</strong> to use parametric modeling.</p>
-                            
-                            <h5 class="fw-bold">Why OnShape?</h5>
-                            <p>Unlike Tinkercad's drag-and-drop mesh editing, OnShape allowed me to define exact dimensions for the clamping screw.</p>
-
-                            <figure class="mb-4">
-                                <img class="img-fluid rounded shadow" src="assets/clamp_3dmodel.png" alt="OnShape Detail View" />
-                                <figcaption class="figure-caption text-center mt-2">Detailed view of the clamp mechanism in OnShape.</figcaption>
-                            </figure>
-                        </section>
-
-                        <hr class="my-5">
-
-                        <section class="mb-5">
-                            <h3 class="fw-bolder mb-3">4. Slicing & Printing</h3>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="p-3 border rounded bg-light">
-                                        <h6 class="fw-bold">Print Settings</h6>
-                                        <ul class="small mb-0 list-unstyled">
-                                            <li><strong>Printer:</strong> Prusa MINI+</li>
-                                            <li><strong>Material:</strong> PLA</li>
-                                            <li><strong>Supports:</strong> No (Designed for printability)</li>
-                                            <li><strong>Infill:</strong> 15% (Grid)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mt-3 mt-md-0">
-                                    <p class="small">I sliced the model using PrusaSlicer. I oriented the part to minimize supports and ensure the clamp screw threads were printed vertically for strength.</p>
-                                </div>
-                            </div>
-                            </section>
-
-                        <section class="mb-5">
-                            <h3 class="fw-bolder mb-3">5. Reflection: Tinkercad vs. OnShape</h3>
-                            <p>Comparing the two tools, I found that:</p>
-                            <ul>
-                                <li><strong>Tinkercad</strong> was excellent for quickly bashing together the idea to see if the hook shape looked right.</li>
-                                <li><strong>OnShape</strong> was necessary for the mechanical parts (the screw and clamp) because I needed precise tolerances so the parts would fit together.</li>
-                            </ul>
-                            <p class="fw-bold mt-4">Did I solve the annoyance?</p>
-                            <p>Yes. The final print successfully holds my headphones off the desk. If I were to do this again, I would increase the thickness of the screw handle for better grip.</p>
-                        </section>
-
-                    </article>
-
-                    <div class="d-flex justify-content-center mt-5">
-                        <a class="btn btn-outline-primary btn-lg px-5 rounded-pill" href="projects.html">
-                            <i class="bi bi-arrow-left me-2"></i>
-                            Back to Project 1 (3D Prints)
-                        </a>
-                    </div>
-
+<div class="col-lg-8">
+    <article>
+        
+        <section class="mb-5">
+            <h3 class="fw-bolder mb-3">The "Daily Annoyance"</h3>
+            <p class="fs-5 mb-4 text-muted">
+                I identified a recurring problem in my daily routine: my headphones were constantly cluttering my desk or falling on the floor.
+            </p>
+            <p>To solve this, I applied the <strong>Task Unification</strong> pattern. My goal was to use the desk itself to hold the headphones via friction.</p>
+            
+            <div class="row align-items-center my-4 border rounded p-3 bg-white shadow-sm">
+                <div class="col-md-6">
+                    <img class="img-fluid rounded border" src="assets/headphonehook_sketch.png" alt="Initial Paper Sketch">
+                    <p class="small text-muted text-center mt-2 mb-0">Figure 1: Initial Concept Sketch</p>
                 </div>
+                <div class="col-md-6">
+                    <h5 class="fw-bold mt-3 mt-md-0">Design Thinking</h5>
+                    <p class="small mb-0">
+                        Before using CAD, I sketched the mechanism to solve two constraints:
+                    </p>
+                    <ul class="small mb-0 mt-2">
+                        <li><strong>Clamping Force:</strong> Attaching without screws/glue.</li>
+                        <li><strong>Universal Fit:</strong> Ensuring the hook fits my specific headphones.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <section class="mb-5">
+            <h3 class="fw-bolder mb-3">Phase 1: The Tinkercad Remix</h3>
+            <p class="mb-4">I started by finding existing 3D models of clamps and hooks. I imported these into Tinkercad to create a quick "looks-like" prototype.</p>
+            
+            <figure class="mb-4">
+                <img class="img-fluid rounded shadow" src="assets/headphoneclampV1.jpg" alt="Tinkercad Design View" />
+                <figcaption class="figure-caption text-center mt-2">Figure 2: First iteration created in Tinkercad.</figcaption>
+            </figure>
+
+            <h5 class="fw-bold">Process & Challenges</h5>
+            <p>**<strong>work on this this**</p>
+        </section>
+
+        <hr class="my-5">
+
+        <section class="mb-5">
+            <h3 class="fw-bolder mb-3">Phase 2: The OnShape Upgrade</h3>
+            <p class="mb-4">After testing the Tinkercad print, I realized I needed a stronger, more precise mechanism. I moved to <strong>OnShape</strong> to use parametric modeling.</p>
+            
+            <figure class="mb-4">
+                <img class="img-fluid rounded shadow" src="assets/onshape_final_headphone_hook.png" alt="OnShape Detail View" />
+                <figcaption class="figure-caption text-center mt-2">Figure 3: Detailed view of the final clamp mechanism in OnShape.</figcaption>
+            </figure>
+
+            <h5 class="fw-bold">Why OnShape?</h5>
+            <p>Unlike Tinkercad's drag-and-drop mesh editing, OnShape allowed me to define exact dimensions for the clamping screw.</p>
+        </section>
+
+        <hr class="my-5">
+
+        <section class="mb-5">
+            <h3 class="fw-bolder mb-3">Slicing & Printing</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="p-3 border rounded bg-light">
+                        <h6 class="fw-bold">Print Settings</h6>
+                        <ul class="small mb-0 list-unstyled">
+                            <li><strong>Printer:</strong> Prusa MINI+</li>
+                            <li><strong>Material:</strong> PLA</li>
+                            <li><strong>Supports:</strong> No (Designed for printability)</li>
+                            <li><strong>Infill:</strong> 15% (Grid)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                    <p class="small">I sliced the model using PrusaSlicer. I oriented the part to minimize supports and ensure the clamp screw threads were printed vertically for strength.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="fw-bolder mb-3">Reflection</h3>
+            <p>The final print successfully holds my headphones off the desk and the final orientation works with the . If I were to do this again, I would increase the infill percentage to 20% instead of 15% becuase I noticed that if you tighten the clamp too much then the whole print starts to bend.</p>
+        </section>
+
+    </article>
+
+    <div class="d-flex justify-content-center mt-5">
+        <a class="btn btn-outline-primary btn-lg px-5 rounded-pill" href="projects.html">
+            <i class="bi bi-arrow-left me-2"></i>
+            Back to Project 1 (3D Prints)
+        </a>
+    </div>
+
+</div>
             </div>
         </div>
     </section>
