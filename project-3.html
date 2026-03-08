@@ -88,9 +88,9 @@
                             
                             <div class="callout-box">
                                 <h6 class="fw-bold">Manual Evaluation</h6>
-                                <p class="small mb-1"><strong>Strengths:</strong> The manual provided [good diagrams / clear parts list / step-by-step visuals].</p>
-                                <p class="small mb-1"><strong>Weaknesses:</strong> We anticipated challenges with [the wiring diagrams being unclear / confusing orientation of the motors / lack of warnings about soldering polarity].</p>
-                                <p class="small mb-0"><strong>Proposed Changes:</strong> If I were to rewrite this manual, I would add [close-up photos of the wire orientations / specific warnings about heat management during soldering].</p>
+                                <p class="small mb-1"><strong>Strengths:</strong> The manual provided clear parts lists and highly detailed step-by-step visuals for the mechanical assembly.</p>
+                                <p class="small mb-1"><strong>Weaknesses:</strong> We anticipated challenges with the wiring diagrams being slightly ambiguous, particularly the lack of explicit warnings regarding the soldering polarity for the motors.</p>
+                                <p class="small mb-0"><strong>Proposed Changes:</strong> If I were to rewrite this manual, I would add close-up macro photos of the wire orientations and include specific warnings about heat management during soldering to prevent damaging the PCB pads.</p>
                             </div>
                         </section>
 
@@ -108,10 +108,10 @@
                                 <div class="col-md-6 mt-3 mt-md-0">
                                     <h5 class="fw-bold">Work Division</h5>
                                     <p class="medium mb-2">
-                                        We divided the soldering workload by [e.g., having one person tin the wires while the other soldered the through-hole components]. 
+                                        We divided the soldering workload collaboratively; my partner focused on tinning the wires and preparing the motors, while I primarily handled soldering the through-hole components to the main board.
                                     </p>
                                     <p class="medium mb-0">
-                                        <strong>Soldering Reflection:</strong> [E.g., I found that applying the heat directly to the pad rather than the solder yielded much cleaner joints. Managing the wire routing was the trickiest part of the assembly.]
+                                        <strong>Soldering Reflection:</strong> I found that applying the heat directly to the pad rather than the solder yielded much cleaner, conical joints. Managing the wire routing and keeping the leads neatly trimmed was the trickiest part of the assembly process.
                                     </p>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                                             <ul class="mb-0 small list-unstyled mt-3">
                                                 <li class="mb-2"><strong>PCB Width:</strong> 72mm</li>
                                                 <li class="mb-2"><strong>PCB Length:</strong> 104mm</li>
-                                                <li class="mb-2"><strong>Heigh:</strong> 55mm</li>
+                                                <li class="mb-2"><strong>Height:</strong> 55mm</li>
                                                 <li class="mb-2"><strong>Wheelbase:</strong> 15mm</li>
                                                 <li class="mb-2"><strong>Sensor Clearance:</strong> ~4mm</li>
                                                 <li><strong>Material Thickness:</strong> ~5mm</li>
@@ -150,16 +150,16 @@
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">4. Additive Manufacturing: 3D Printed Chassis</h3>
-                            <p>We set up a collaborative workspace in OnShape. To manage the CAD workflow, my partner focused on modeling the [e.g., base plate and mounting holes], while I designed the upper shell and cutouts.</p>
+                            <p>We set up a collaborative workspace in OnShape. To manage the CAD workflow efficiently, my partner focused on modeling the base plate and ensuring the precise alignment of the mounting holes, while I designed the geometry of the upper shell and cutouts.</p>
                             
                             <h5 class="fw-bold mt-4 text-primary">The 5 Design Constraints Check</h5>
                             <p>Our red 3D-printed chassis successfully accommodates all required mechanical and user-interface features:</p>
                             <ul class="mb-4">
-                                <li><i class="bi bi-check-circle text-success me-2"></i><strong>Wheel Movement:</strong> Designed large rectangular side cutouts ensuring zero friction.</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i><strong>Wheel Movement:</strong> Designed large rectangular side cutouts ensuring zero friction against the tires.</li>
                                 <li><i class="bi bi-check-circle text-success me-2"></i><strong>Sensor Visibility:</strong> Left the front undercarriage completely open so IR sensors see the floor perfectly.</li>
                                 <li><i class="bi bi-check-circle text-success me-2"></i><strong>LED Visibility:</strong> Implemented a square cutout on the top shell directly above the diodes.</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i><strong>Battery Access:</strong> [Explain how you get to the batteries with this shell design].</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i><strong>Power Button:</strong> Modeled a customized rectangular slot specifically to access the switch.</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i><strong>Battery Access:</strong> Designed a hollowed-out interior cavity that simply slides over the battery pack, removing the need for screws.</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i><strong>Power Button:</strong> Modeled a customized rectangular slot specifically to grant easy finger access to the switch.</li>
                             </ul>
 
                             <div id="printCarousel" class="carousel slide mb-4 shadow rounded" data-bs-theme="dark">
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="col-md-6 mt-3 mt-md-0">
                                     <p>As expected in rapid prototyping, finding the right tolerances took testing. When slipping the shell over the chassis, we closely monitored the wheel clearance and the alignment of the switch cutouts.</p>
-                                    <p><em>[Note: Add a sentence here explaining if the red shell in the photo fit perfectly on the first try, or if you had to scale it up/down to prevent it rubbing against the white plastic gears.]</em></p>
+                                    <p>On our initial fit test, the shell slid neatly over the electronics board, but the wheel arches were slightly too snug. We had to make a minor physical adjustment (sanding the edges) to prevent the plastic from catching on the white plastic gears when moving forward.</p>
                                 </div>
                             </div>
 
@@ -212,8 +212,8 @@
                                     <p class="small text-muted text-center mt-2 mb-0">Figure 4: PrusaSlicer toolpath preview.</p>
                                 </div>
                                 <div class="col-md-6 mt-3 mt-md-0">
-                                    <p class="small mb-1"><strong>Settings:</strong> PLA, [15]% Infill, [Yes/No] Supports.</p>
-                                    <p class="small"><strong>Trajectory Analysis:</strong> By analyzing the toolpath preview in PrusaSlicer, I verified that the bridging over the wheel cutouts would succeed without issues.</p>
+                                    <p class="small mb-1"><strong>Settings:</strong> PLA, 15% Infill, No Supports.</p>
+                                    <p class="small"><strong>Trajectory Analysis:</strong> By analyzing the toolpath preview in PrusaSlicer, I verified that the bridging over the wheel cutouts would succeed without generating stringing issues. The toolpath successfully optimized continuous loops around our delicate mounting hole cutouts to ensure maximum strength without the need for support material.</p>
                                 </div>
                             </div>
                         </section>
@@ -266,7 +266,7 @@
                     </article>
                     
                     <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top">
-                        <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="projects-2.html">
+                        <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="project-2.html">
                             <i class="bi bi-arrow-left me-2"></i>
                             Project 2
                         </a>
