@@ -70,9 +70,11 @@
                                 <ul class="list-unstyled mb-0">
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Soldering Iron</li>
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Digital Calipers</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>OnShape (Collab Workspace)</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>OnShape</li>
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>PrusaSlicer</li>
                                     <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Laser Cutter</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Hot Glue Gun</li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -226,20 +228,20 @@
                                 </div>
                                 <div class="col-md-6 mt-3 mt-md-0">
                                     <p>As expected in rapid prototyping, finding the right tolerances took testing. When slipping the shell over the chassis, we closely monitored the wheel clearance and the alignment of the switch cutouts.</p>
-                                    <p>On our initial fit test, the shell had to be slightly forced for it to slide over the electronics board. It was the back curved part where that made it too snug to fit properly. We attempted to make a minor physical adjustment by sanding the edges to prevent the plastic from catching on the circuit board. Roy and I were not satitied by forcing the shell into place, with that in mind we decided to implement an iteration where we got rid of the curved backside and made it bend at a 90-degree angle. This can be observed in the laser cut portion near the bottom.</p>
+                                    <p>On our initial fit test, the shell had to be slightly forced for it to slide over the electronics board. It was the back curved part where that made it too snug to fit properly. We attempted to make a minor physical adjustment by sanding the edges to prevent the plastic from catching on the circuit board. Roy and I were not satitied by forcing the shell into place, with that in mind we decided to implement an iteration where we got rid of the curved backside and made it bend at a 90-degree angle.</p>
+                                    <p>By observering figure 4 below, we can see that the shape of the chassis is much different. Figure 4 is version 5 of the many iterations we did to get the perfect fit. The final design was a success, as the shell now easily slides over the robot without any friction or misalignment.</p>
                                 </div>
                             </div>
 
                             <h5 class="fw-bold">Slicing & Trajectory Analysis</h5>
                             <div class="row mb-4 align-items-center">
                                 <div class="col-md-6">
-                                    <img src="assets/IMG_0003.jpg" class="img-fluid rounded shadow border" alt="Prusa Slicer Trajectory">
-                                    <p class="small text-muted text-center mt-2 mb-0">Figure 4: PrusaSlicer toolpath preview.</p>
+                                    <img src="assets/prusa_slice_chassis.png" class="img-fluid rounded shadow border" alt="Prusa Slicer Trajectory">
+                                    <p class="small text-muted text-center mt-2 mb-0">Figure 4: PrusaSlicer preview.</p>
                                 </div>
                                 <div class="col-md-6 mt-3 mt-md-0">
-                                    <p class="small mb-1"><strong>Settings:</strong> PLA, 15% Infill, No Supports since it was printed upside down.</p>
-                                    <p class="small"><strong>Trajectory Analysis:</strong> By analyzing the toolpath preview in PrusaSlicer, I verified that the bridging over the wheel cutouts would succeed without generating stringing issues. The toolpath successfully optimized continuous loops around our delicate mounting hole cutouts to ensure maximum strength without the need for support material.</p>
-                                </div>
+                                    <p class="small mb-1"><strong>Settings:</strong> PLA, 15% Infill, Had to add supports to the overhanging parts unlike previous version because this was printed right side up.</p>
+                                    <p class="small"><strong>Trajectory Analysis:</strong> By analyzing the toolpath preview in PrusaSlicer, we identified critical overhangs particularly around the wheel arches and customized cutouts that required support material. The trajectory analysis allowed us to verify that the generated supports would adequately stabilize these bridges during printing, while ensuring they could be cleanly removed later without damaging the delicate mounting holes.</p>                                </div>
                             </div>
                         </section>
 
@@ -256,7 +258,7 @@
                                 </div>
                                 <div class="col-md-7 mt-3 mt-md-0">
                                     <h5 class="fw-bold">Kerf & Calibration</h5>
-                                    <p>Before cutting the final design, we completed a practice run for safety and calibration. Designing in OnShape meant strictly accounting for material thickness. As seen in Figure 5, we measured the wood at approximately 5.18 mm. Factoring in the <strong>kerf</strong> (the material burned away by the laser) was essential for ensuring the finger joints fit snugly together before final assembly with hot glue.</p>
+                                    <p>Before cutting the final design, we completed a practice run for safety and calibration. Designing in OnShape meant strictly accounting for material thickness. Luckily for us, we knew that the plywood that was being cut into was 3mm in thickness. Factoring in the <strong>kerf</strong>, another word for the material that is burned away by the laser was essential for ensuring the finger joints fit snugly together before final assembly with hot glue.</p>
                                 </div>
                             </div>
 
@@ -269,24 +271,20 @@
                         <hr class="my-5">
 
                         <section class="mb-5">
-                            <h3 class="fw-bolder mb-3">6. Final Reflection: Additive vs. Subtractive</h3>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img class="img-fluid rounded shadow border mb-3 mb-md-0" src="assets/IMG_0004.jpg" alt="Both Robots">
-                                </div>
-                                <div class="col-md-8">
-                                    <p class="mb-3">
-                                        This project highlighted the distinct challenges between Additive (3D printing) and Subtractive (Laser Cutting) manufacturing. 
-                                    </p>
-                                    <p class="mb-3">
-                                        <strong>3D Printing</strong> offered immense freedom for creating smooth, continuous geometry (like our red upper shell), but iteration was heavily dependent on long print times and getting the plastic shrinkage tolerances right.
-                                    </p>
-                                    <p class="mb-0">
-                                        <strong>Laser Cutting</strong> was incredibly fast, allowing for rapid iteration. However, the design process was mentally harder, as we had to figure out how to enclose the robot using strictly flat planes and precise kerf-adjusted finger joints. Ultimately, learning to measure with calipers and design around the physical constraints of real-world electronics was a highly rewarding engineering challenge.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+    <h3 class="fw-bolder mb-3">6. Final Reflection: Additive vs. Subtractive</h3>
+    
+    <p class="mb-3 fs-5">
+        This project highlighted the distinct challenges between Additive (3D printing) and Subtractive (Laser Cutting) manufacturing. 
+    </p>
+    
+    <p class="mb-3">
+        <strong>3D Printing</strong> offered immense freedom for creating smooth, continuous geometry (like our red upper shell), but iteration was heavily dependent on long print times and getting the plastic shrinkage tolerances right.
+    </p>
+    
+    <p class="mb-0">
+        <strong>Laser Cutting</strong> was incredibly fast, allowing for rapid iteration. However, the design process was mentally harder, as we had to figure out how to enclose the robot using strictly flat planes and precise kerf-adjusted finger joints. Ultimately, learning to measure with calipers and design around the physical constraints of real-world electronics was a highly rewarding engineering challenge.
+    </p>
+</section>
 
                     </article>
                     
