@@ -95,19 +95,63 @@
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">2. Fabrication & Assembly</h3>
-                            <p>We utilized Prusa Mini+ printers to fabricate the Phoenix Hand V2 parts in PLA at a 150% scale.</p>
+                            <p>We utilized Prusa Mini+ printers to fabricate the e-NABLE Phoenix Hand V2 parts in PLA at a 150% scale. Because of the size increase, the print jobs had to be carefully divided across multiple machines over several days.</p>
                             
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <div class="bg-secondary bg-opacity-10 rounded p-5 text-center text-muted border border-dashed">
-                                        <i class="bi bi-camera fs-1 d-block mb-2"></i>
-                                        [Insert Assembly & Final Hand Photos Here]
+                            <div class="row g-4 mb-5">
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/wrist_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Blue 3D printed wrist part on Prusa print bed">
+                                        <div class="card-body bg-light text-center py-3">
+                                            <small class="text-muted fw-bold d-block"><i class="bi bi-printer me-2"></i>Printing the Gauntlet</small>
+                                            <small class="text-muted">The wrist component finishing on the Prusa Mini+.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/parts_before_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Disassembled pink finger parts">
+                                        <div class="card-body bg-light text-center py-3">
+                                            <small class="text-muted fw-bold d-block"><i class="bi bi-box-seam me-2"></i>Raw Components</small>
+                                            <small class="text-muted">Pink finger segments and snap-pins post-printing.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/parts_after_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Assembled pink fingers">
+                                        <div class="card-body bg-light text-center py-3">
+                                            <small class="text-muted fw-bold d-block"><i class="bi bi-tools me-2"></i>Sub-Assembly</small>
+                                            <small class="text-muted">Fingers and knuckles assembled using the 3D printed pins.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/final_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Fully assembled 3D printed hand with strings">
+                                        <div class="card-body bg-light text-center py-3">
+                                            <small class="text-muted fw-bold d-block"><i class="bi bi-check-circle me-2"></i>Final Stringing</small>
+                                            <small class="text-muted">Routing the tensioning cables through the tensioner box.</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <h5 class="fw-bold">Functional Analysis</h5>
-                            <p><em>[We will add your analysis of how the grip works, the wrist-driven mechanism, and its limits here.]</em></p>
+                            <h5 class="fw-bold text-primary">Functional Analysis</h5>
+                            <p>The Phoenix Hand V2 relies on a <strong>wrist-driven mechanism</strong>. When the user flexes their wrist downward, the tensioning cables (the white strings routed from the tensioner box down to the fingertips) are pulled taut. Because these strings are routed over the joints, this tension forces the fingers to curl inward simultaneously, creating a grasping motion.</p>
+                            
+                            <div class="bg-white border rounded p-4 mt-3 shadow-sm">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-3">
+                                        <strong><i class="bi bi-arrows-collapse text-primary me-2"></i>Grip Actuation:</strong> The grip is strictly binary—all fingers close together to form a fist. There is no individual finger articulation.
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong><i class="bi bi-arrow-return-left text-primary me-2"></i>Reset Mechanism:</strong> When the wrist returns to a neutral position, the cable tension is released. Elastic cords routed through the back of the fingers snap the hand back to an open position.
+                                    </li>
+                                    <li>
+                                        <strong><i class="bi bi-exclamation-triangle text-primary me-2"></i>Limitations:</strong> The overall grip strength is directly proportional to the user's wrist strength. Additionally, the smooth, hard PLA surface has a low coefficient of friction, meaning smooth objects can easily slip unless the hand is modified with grip tape or a task-specific attachment (addressed in Part 4).
+                                    </li>
+                                </ul>
+                            </div>
                         </section>
 
                         <hr class="my-5">
@@ -131,19 +175,40 @@
                             <h5 class="fw-bold mt-4 text-primary">Systematic Inventive Thinking (SIT)</h5>
                             <p>This design utilizes the <strong>Task Unification</strong> SIT pattern. In traditional use, a person might need a separate pop-socket, a desk stand, or their other hand to stabilize their device. By applying Task Unification, we assigned the new task of "phone stabilization" directly to the existing structural knuckles of the prosthesis. The prosthetic hand itself seamlessly takes on the job of the accessory.</p>
 
-                            <div class="row mt-4 align-items-stretch">
-                                <div class="col-md-4 mb-4 mb-md-0">
-                                    <div class="card border-0 shadow-sm h-100">
-                                        <img src="assets/phone_clip_additive_piece.jpg" class="card-img-top rounded" alt="3D printed black smartphone mount">
-                                        <div class="card-footer bg-white border-0 text-center text-muted small py-3 mt-auto">
-                                            <i class="bi bi-camera me-2"></i>The 3D-printed snap-fit smartphone bracket.
+                            <div class="row mt-4 justify-content-center">
+                                <div class="col-md-10">
+                                    <div id="clipCarousel" class="carousel slide mb-4 shadow border rounded" data-bs-theme="dark">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#clipCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                                            <button type="button" data-bs-target="#clipCarousel" data-bs-slide-to="1"></button>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="bg-secondary bg-opacity-10 rounded p-4 text-center text-muted border border-dashed h-100 d-flex flex-column justify-content-center">
-                                        <i class="bi bi-file-earmark-image fs-1 d-block mb-2"></i>
-                                        <img src="assets/CAD_phone_clip.jpg" class="card-img-top rounded" alt="3D printed black smartphone mount">
+                                        <div class="carousel-inner rounded">
+                                            
+                                            <div class="carousel-item active" data-bs-interval="false">
+                                                <img src="assets/IMG_6571.jpg" class="d-block w-100" style="height: 400px; object-fit: contain; background-color: #f8f9fa;" alt="3D printed black smartphone mount">
+                                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3 mx-4">
+                                                    <h5 class="fw-bold"><i class="bi bi-camera me-2"></i>Physical Prototype</h5>
+                                                    <p class="mb-2">The 3D-printed snap-fit smartphone bracket.</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="carousel-item" data-bs-interval="false">
+                                                <img src="assets/image_c6ebea.jpg" class="d-block w-100" style="height: 400px; object-fit: contain; background-color: #f8f9fa;" alt="OnShape CAD model">
+                                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3 mx-4">
+                                                    <h5 class="fw-bold"><i class="bi bi-laptop me-2"></i>OnShape CAD</h5>
+                                                    <p class="mb-2">Digital model of the task-specific modification.</p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#clipCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#clipCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -151,13 +216,13 @@
                             <div class="row mt-4">
                                 <div class="col-md-6 mb-4 mb-md-0">
                                     <figure class="figure w-100">
-                                        <img src="assets/hand_with_clip.jpg" class="figure-img img-fluid rounded shadow-sm w-100" alt="Top view of the smartphone mount attached to the Phoenix Hand">
+                                        <img src="assets/IMG_6570.jpg" class="figure-img img-fluid rounded shadow-sm w-100" alt="Top view of the smartphone mount attached to the Phoenix Hand">
                                         <figcaption class="figure-caption text-center">Top view: Mount securely snapped onto the ring and middle finger knuckles.</figcaption>
                                     </figure>
                                 </div>
                                 <div class="col-md-6">
                                     <figure class="figure w-100">
-                                        <img src="assets/hand_with_clip_underside.jpg" class="figure-img img-fluid rounded shadow-sm w-100" alt="Bottom view of a hand wearing the prosthesis with the mount attached">
+                                        <img src="assets/IMG_6569.jpg" class="figure-img img-fluid rounded shadow-sm w-100" alt="Bottom view of a hand wearing the prosthesis with the mount attached">
                                         <figcaption class="figure-caption text-center">Bottom view: The attachment maintains perfect clearance for the tension lines.</figcaption>
                                     </figure>
                                 </div>
