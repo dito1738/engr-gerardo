@@ -14,57 +14,19 @@
         .callout-box { border-left: 4px solid #0d6efd; background-color: #f8f9fa; padding: 15px; margin-bottom: 20px; border-radius: 0 5px 5px 0;}
         
         /* Modal Custom File Grid Styling */
-        .file-category {
-            margin-bottom: 25px;
+        .file-category { margin-bottom: 25px; }
+        .file-category h6 { font-size: 1.1rem; color: #444; margin-bottom: 12px; border-bottom: 2px solid #eee; padding-bottom: 8px; font-weight: bold; }
+        .file-list { list-style-type: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+        .file-list li a { display: block; padding: 10px 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; color: #0d6efd; text-decoration: none; font-size: 0.9rem; transition: all 0.2s ease; }
+        .file-list li a:hover { background-color: #e9ecef; border-color: #0d6efd; transform: translateX(3px); }
+
+        /* Carousel Enhancements */
+        .carousel-item img {
+            cursor: pointer; 
+            transition: opacity 0.2s ease-in-out;
         }
-        .file-category h6 {
-            font-size: 1.1rem;
-            color: #444;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 8px;
-            font-weight: bold;
-        }
-        .file-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
-        }
-        .file-list li a {
-            display: block;
-            padding: 10px 15px;
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 6px;
-            color: #0d6efd; /* Bootstrap Primary Blue */
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
-        .file-list li a:hover {
-            background-color: #e9ecef;
-            border-color: #0d6efd;
-            transform: translateX(3px); 
-        }
-        .doc-section {
-            background-color: #e7f1ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-        .doc-section h6 {
-            border-bottom: none;
-            color: #0d6efd;
-            margin-top: 0;
-        }
-        .doc-list li a {
-            background-color: #fff;
-            color: #333;
-            font-weight: 600;
-            border-color: #b6d4fe;
+        .carousel-item img:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -139,10 +101,8 @@
                                     <span><i class="bi bi-cloud-download me-2"></i>Select a file...</span>
                                     <i class="bi bi-chevron-right"></i>
                                 </button>
-                                
                             </div>
                         </div>
-                        
                     </div>
                 </div>
 
@@ -153,9 +113,20 @@
                             <h3 class="fw-bolder mb-3">1. The Open-Source Ecosystem</h3>
                             <p>Before fabricating the prosthesis, I explored the open-source assistive technology ecosystem, including the e-NABLE Hub, the NIH 3D Print Exchange, and Makers Making Change.</p>
                             
-                            <div class="callout-box">
-                                <h6 class="fw-bold">Documentation Evaluation</h6>
-                                <p class="small mb-1"><em>[We will fill this in with your critique of the Phoenix Hand docs based on Findability, Completeness, Clarity, Visuals, Troubleshooting, and Accessibility.]</em></p>
+                            <p>Initially, navigating these platforms felt a bit confusing—which is normal for me when entering a dense, new website repository. However, after spending some time clicking around and exploring the directory structures, I found it relatively simple to navigate and locate the specific files I needed. During this exploration, I noticed the wide variety of devices available across the platforms, including several different iterative versions of the Phoenix Hand.</p>
+
+                            <p>If I were to build my own assistive technology repository from scratch, I honestly wouldn't change the foundational structure much, as the current categorization works well. However, one specific improvement I would implement is <strong>adding visual thumbnails to the directory lists</strong>. Allowing users to see pictures of the devices <em>before</em> clicking on them would vastly improve the browsing experience.</p>
+                            
+                            <div class="callout-box mt-4">
+                                <h5 class="fw-bold mb-3"><i class="bi bi-card-checklist me-2"></i>Documentation Evaluation</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2"><strong>Findability:</strong> It takes a moment to acclimate to the site hierarchy, but files are logically grouped. Adding image previews to the main search results would make finding specific models much faster.</li>
+                                    <li class="mb-2"><strong>Completeness:</strong> The provided STLs and assembly materials are comprehensive, ensuring all printed parts and non-printed hardware are accounted for.</li>
+                                    <li class="mb-2"><strong>Clarity:</strong> The baseline instructions are relatively straightforward, though a complete beginner might need to re-read certain mechanical routing steps multiple times.</li>
+                                    <li class="mb-2"><strong>Visual Documentation:</strong> While individual manuals use photos, the broader repository navigation lacks upfront visual previews. Step-by-step photos during assembly are heavily relied upon but sometimes lack specific close-up annotations.</li>
+                                    <li class="mb-2"><strong>Troubleshooting:</strong> The documentation could be improved by highlighting "common pitfalls" directly within the main assembly steps rather than at the end.</li>
+                                    <li><strong>Accessibility:</strong> The platforms rely heavily on English text and specific hardware assumptions. Expanding multi-language support and ensuring high-contrast, screen-reader-friendly PDFs would make the ecosystem much more inclusive.</li>
+                                </ul>
                             </div>
                         </section>
 
@@ -163,7 +134,20 @@
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">2. Fabrication & Assembly</h3>
-                            <p>We utilized Prusa Mini+ printers to fabricate the e-NABLE Phoenix Hand V2 parts in PLA at a 150% scale. Because of the size increase, the print jobs had to be carefully divided across multiple machines over several days.</p>
+                            <p>We utilized Prusa Mini+ printers to fabricate the e-NABLE Phoenix Hand V2 parts in PLA. To fit our sizing requirements, the entire model was scaled up to <strong>150%</strong>. Because of the size increase, the print jobs had to be carefully divided across multiple machines over several days.</p>
+                            
+                            <div class="card bg-light border-0 mb-4">
+                                <div class="card-body">
+                                    <h6 class="fw-bold"><i class="bi bi-sliders me-2 text-primary"></i>PrusaSlicer Settings:</h6>
+                                    <ul class="mb-0 small">
+                                        <li><strong>Material:</strong> PLA</li>
+                                        <li><strong>Layer Height:</strong> 0.10mm (Chosen over the standard 0.20mm structural profile to yield a much smoother cosmetic surface finish).</li>
+                                        <li><strong>Infill:</strong> 15%</li>
+                                        <li><strong>Supports:</strong> The majority of the parts did not require additional generated supports, relying purely on the model's built-in optimized geometry.</li>
+                                        <li><strong>Ironing:</strong> Enabled for all top surfaces to further enhance the aesthetic smoothness of the outer shells.</li>
+                                    </ul>
+                                </div>
+                            </div>
                             
                             <div class="row g-4 mb-5">
                                 <div class="col-md-6">
@@ -209,15 +193,9 @@
                             
                             <div class="bg-white border rounded p-4 mt-3 shadow-sm">
                                 <ul class="list-unstyled mb-0">
-                                    <li class="mb-3">
-                                        <strong><i class="bi bi-arrows-collapse text-primary me-2"></i>Grip Actuation:</strong> The grip is strictly binary—all fingers close together to form a fist. There is no individual finger articulation.
-                                    </li>
-                                    <li class="mb-3">
-                                        <strong><i class="bi bi-arrow-return-left text-primary me-2"></i>Reset Mechanism:</strong> When the wrist returns to a neutral position, the cable tension is released. Elastic cords routed through the back of the fingers snap the hand back to an open position.
-                                    </li>
-                                    <li>
-                                        <strong><i class="bi bi-exclamation-triangle text-primary me-2"></i>Limitations:</strong> The overall grip strength is directly proportional to the user's wrist strength. Additionally, the smooth, hard PLA surface has a low coefficient of friction, meaning smooth objects can easily slip unless the hand is modified with grip tape or a task-specific attachment (addressed in Part 4).
-                                    </li>
+                                    <li class="mb-3"><strong><i class="bi bi-arrows-collapse text-primary me-2"></i>Grip Actuation:</strong> The grip is strictly binary—all fingers close together to form a fist. There is no individual finger articulation.</li>
+                                    <li class="mb-3"><strong><i class="bi bi-arrow-return-left text-primary me-2"></i>Reset Mechanism:</strong> When the wrist returns to a neutral position, the cable tension is released. Elastic cords routed through the back of the fingers snap the hand back to an open position.</li>
+                                    <li><strong><i class="bi bi-exclamation-triangle text-primary me-2"></i>Limitations:</strong> The overall grip strength is directly proportional to the user's wrist strength. Additionally, the smooth, hard PLA surface has a low coefficient of friction, meaning smooth objects can easily slip unless the hand is modified with grip tape or a task-specific attachment (addressed in Part 4).</li>
                                 </ul>
                             </div>
                         </section>
@@ -226,9 +204,40 @@
 
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">3. Documentation Redesign & Usability Testing</h3>
-                            <p>Based on our assembly experience, we identified the most challenging steps and rewrote the documentation to improve clarity for future builders.</p>
+                            <p>During our build, we found that the physical assembly of the fingers, snap-pins, and gauntlet was relatively straightforward. However, the documentation completely fell apart during the <strong>stringing and tensioning phase</strong>.</p>
                             
-                            <p><em>[We will insert your improved docs with annotated photos here, followed by the peer usability test reflection.]</em></p>
+                            <p>The official PDF and video tutorials were highly confusing regarding the tensioner block—specifically how to correctly interface the thumb tip pin, the thumb tensioner pin, the whippletree, and the gripper box. The routing paths were poorly visualized, making it nearly impossible to replicate the intended mechanical tensioning using the rear screws. To solve this, I developed a simplified, alternative assembly method.</p>
+                            
+                            <div class="card border-0 shadow-sm mb-4 mt-4">
+                                <div class="card-header bg-dark text-white fw-bold">
+                                    <i class="bi bi-tools me-2"></i>Improved Guide: Simplified Whippletree & Swivel Pin Hack
+                                </div>
+                                <div class="card-body bg-white">
+                                    <h6 class="fw-bold text-primary">Materials & Tools Needed:</h6>
+                                    <ul class="small mb-3">
+                                        <li>Whippletree, Gripper Box, & Swivel Pin STLs</li>
+                                        <li>5x Tensioning Lines (Non-stretching cord)</li>
+                                        <li>Cyanoacrylate (Superglue)</li>
+                                        <li>Scissors or Other Cutting Tools</li>
+                                    </ul>
+                                    
+                                    <h6 class="fw-bold text-primary mt-3">Alternative Assembly Steps:</h6>
+                                    <ol class="small mb-3">
+                                        <li class="mb-2"><strong>Route the Fingers:</strong> Feed the four main finger tension lines through the standard outer holes on the whippletree.</li>
+                                        <li class="mb-2"><strong>Route the Thumb:</strong> Feed the fifth string (the thumb line) directly through the main, large central hole of the whippletree and tie a secure knot to hold it in place.</li>
+                                        <li class="mb-2"><strong>Insert the Swivel Pin:</strong> Slide the 3D-printed swivel pin through that same main central hole of the whippletree so everything is neatly consolidated.</li>
+                                        <li class="mb-2"><strong>Set Tension & Glue:</strong> Pull all strings to the correct tension (so the hand is fully open when the wrist is bent back). Place the assembled whippletree and swivel pin into the gripper box. Apply superglue specifically between the <strong>swivel pin and the inside of the gripper box</strong> (blowing on the glue helps it set faster).</li>
+                                        <li><strong>Trim:</strong> Once the glue fully cures, the tension is permanently locked in. Snip the excess string. You no longer need the complex rear tensioner screws.</li>
+                                    </ol>
+
+                                    <div class="alert alert-warning py-2 mb-0 mt-3" role="alert">
+                                        <strong><i class="bi bi-exclamation-triangle-fill me-2"></i>Troubleshooting Tip:</strong> When applying the superglue, be extremely careful not to let it drip into the sliding tracks of the gauntlet below the gripper box. If the gauntlet fuses to the gripper box, the wrist mechanism will freeze, and the hand will not close!
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5 class="fw-bold mt-4">Peer Usability Test Reflection</h5>
+                            <p>To validate this alternative assembly method, we conducted a peer usability test by sharing our technique with another group that was stuck on the exact same tensioning steps. Their feedback was overwhelmingly positive: <em>"The stringing method was extremely helpful. I had been repeatedly watching the YouTube hand assembly video and reviewing the manual, but neither was effective. This method made the process much more efficient and faster than using a screwdriver, and it worked very well."</em> This test confirmed that sometimes a well-documented, simplified "hack" can be much more accessible and practical than the official, hardware-intensive instructions.</p>
                         </section>
 
                         <hr class="my-5">
@@ -249,22 +258,31 @@
                                         <div class="carousel-indicators">
                                             <button type="button" data-bs-target="#clipCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
                                             <button type="button" data-bs-target="#clipCarousel" data-bs-slide-to="1"></button>
+                                            <button type="button" data-bs-target="#clipCarousel" data-bs-slide-to="2"></button>
                                         </div>
                                         <div class="carousel-inner rounded">
                                             
                                             <div class="carousel-item active" data-bs-interval="false">
-                                                <img src="assets/phone_clip_additive_piece.jpg" class="d-block w-100" style="height: 400px; object-fit: contain; background-color: #f8f9fa;" alt="3D printed black smartphone mount">
+                                                <img src="assets/phone_clip_sketch.png" class="d-block w-100 enlargeable-img" style="height: 400px; object-fit: contain; background-color: #f8f9fa;" alt="Pencil sketch of the smartphone mount">
                                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3 mx-4">
-                                                    <h5 class="fw-bold"><i class="bi bi-camera me-2"></i>Physical Prototype</h5>
-                                                    <p class="mb-2">The 3D-printed snap-fit smartphone bracket.</p>
+                                                    <h5 class="fw-bold"><i class="bi bi-pencil me-2"></i>Initial Sketch</h5>
+                                                    <p class="mb-2">Paper ideation showing the clip geometry interfacing with the knuckles.</p>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="carousel-item" data-bs-interval="false">
-                                                <img src="assets/CAD_phone_clip.jpg" class="d-block w-100" style="height: 400px; object-fit: contain; background-color: #f8f9fa;" alt="OnShape CAD model">
+                                                <img src="assets/CAD_view_phone_clip.png" class="d-block w-100 enlargeable-img" style="height: 400px; object-fit: contain; background-color: #f8f9fa;" alt="OnShape CAD model">
                                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3 mx-4">
                                                     <h5 class="fw-bold"><i class="bi bi-laptop me-2"></i>OnShape CAD</h5>
                                                     <p class="mb-2">Digital model of the task-specific modification.</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="carousel-item" data-bs-interval="false">
+                                                <img src="assets/phone_clip_additive_piece.jpg" class="d-block w-100 enlargeable-img" style="height: 400px; object-fit: contain; background-color: #f8f9fa;" alt="3D printed black smartphone mount">
+                                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded text-white mb-3 mx-4">
+                                                    <h5 class="fw-bold"><i class="bi bi-camera me-2"></i>Physical Prototype</h5>
+                                                    <p class="mb-2">The 3D-printed snap-fit smartphone bracket.</p>
                                                 </div>
                                             </div>
                                             
@@ -278,6 +296,7 @@
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </div>
+                                    <div class="text-center text-muted small mt-2"><i class="bi bi-zoom-in me-1"></i>Click an image to enlarge</div>
                                 </div>
                             </div>
                             
@@ -302,14 +321,24 @@
                         <section class="mb-5">
                             <h3 class="fw-bolder mb-3">5. Reflection & Community Contribution</h3>
                             
-                            <h5 class="fw-bold">Ethical Reflection</h5>
-                            <p class="mb-4"><em>[We will write your ethical reflection here, applying the Microsoft Inclusive Design Toolkit principles.]</em></p>
+                            <h5 class="fw-bold text-primary">Ethical Reflection</h5>
+                            <p>Globally, there are roughly 1.6 billion people living with disabilities. While open-source projects like the e-NABLE Phoenix Hand offer incredible, low-cost alternatives to this population, it is vital to apply the Microsoft Inclusive Design Toolkit principle of <strong>Recognizing Exclusion</strong>. The harsh reality of open-source hardware is that it inherently excludes individuals who lack access to 3D printers, internet connectivity, or the technical literacy required to slice and assemble the files.</p>
+                            
+                            <p>While non-profits and volunteer networks step in to manufacture and distribute these devices locally, relying on a volunteer-driven model presents a significant "awareness gap." The people who are most in need of these free devices are often the least likely to know these programs exist. Furthermore, while the Phoenix Hand beautifully illustrates the principle of <strong>Solve for One, Extend to Many</strong>—providing a basic, modifiable grasping function that can be adapted globally—it cannot completely replace a customized, highly durable medical-grade prosthesis. Open-source AT is a powerful stepping stone, but it has functional limits and systemic distribution challenges.</p>
 
-                            <h5 class="fw-bold">Community Contribution</h5>
-                            <p class="mb-4"><em>[We will describe and link the artifact you are giving back to the community here.]</em></p>
+                            <h5 class="fw-bold mt-4 text-primary">Community Contribution (Stewardship)</h5>
+                            <p>To give back to the open-source community, I have provided a "Lessons Learned" resource directly on this page for future makers. Rather than hiding this information in a separate PDF, my contribution integrates my 150% scale print settings (see Part 2) and documents a major failure mode encountered during the build: the confusing rear-screw tensioning block on the official V2 hand.</p>
+                            
+                            <div class="card bg-dark text-white border-0 shadow-sm mt-3 mb-4">
+                                <div class="card-body p-4">
+                                    <h6 class="fw-bold text-warning mb-3"><i class="bi bi-lightbulb-fill me-2"></i>Lessons Learned: The Swivel Pin Hack</h6>
+                                    <p class="small mb-2">The official documentation for the tensioner block often leads to slipping strings and frustration. Our fix entirely bypasses the rear screws. By routing the thumb string through the main whippletree hole, inserting the swivel pin through that same hole, and supergluing the <strong>swivel pin directly to the inside of the gripper box</strong>, you create a permanent, robust tension anchor.</p>
+                                    <p class="small mb-0 fst-italic text-white-50">Please reference the "Alternative Assembly Steps" in Part 3 of this page for the full, step-by-step instructions on applying this fix to your own e-NABLE build.</p>
+                                </div>
+                            </div>
 
-                            <h5 class="fw-bold">Bridge to the Capstone</h5>
-                            <p><em>[We will write your thoughts on what user need or design challenge you want to explore in the final capstone project.]</em></p>
+                            <h5 class="fw-bold text-primary mt-4">Bridge to the Capstone</h5>
+                            <p>From what I have learned working on this project, I realized that I take my own physical abilities for granted in almost everything I do. One area where this became highly apparent is gaming—a medium that requires incredibly complex manual dexterity and button combinations from both hands. I did some digging and found that there is a large community of gamers who have hand or limb impairments that prevent them from playing the way able-bodied players do. This realization has inspired me to pursue a specific design challenge for my upcoming team capstone project: designing assistive gaming technology or adapted controllers to help bridge this accessibility gap.</p>
                         </section>
 
                     </article>
@@ -342,63 +371,56 @@
                     <div class="file-category">
                         <h6>Fingers & Thumb</h6>
                         <ul class="file-list">
-                            <li><a href="assets/phoenixhand/finger_phalanx.stl" download></i>finger_phalanx.stl</a></li>
-                            <li><a href="assets/phoenixhand/fingertip_long_v2.stl" download></i>fingertip_long_v2.stl</a></li>
-                            <li><a href="assets/phoenixhand/fingertip_short_v2.stl" download></i>fingertip_short_v2.stl</a></li>
-                            <li><a href="assets/phoenixhand/thumb_phalanx.stl" download></i>thumb_phalanx.stl</a></li>
-                            <li><a href="assets/phoenixhand/thumbtip_v2.stl" download></i>thumbtip_v2.stl</a></li>
+                            <li><a href="assets/phoenixhand/finger_phalanx.stl" download><i class="bi bi-box me-2"></i>finger_phalanx.stl</a></li>
+                            <li><a href="assets/phoenixhand/fingertip_long_v2.stl" download><i class="bi bi-box me-2"></i>fingertip_long_v2.stl</a></li>
+                            <li><a href="assets/phoenixhand/fingertip_short_v2.stl" download><i class="bi bi-box me-2"></i>fingertip_short_v2.stl</a></li>
+                            <li><a href="assets/phoenixhand/thumb_phalanx.stl" download><i class="bi bi-box me-2"></i>thumb_phalanx.stl</a></li>
+                            <li><a href="assets/phoenixhand/thumbtip_v2.stl" download><i class="bi bi-box me-2"></i>thumbtip_v2.stl</a></li>
                         </ul>
                     </div>
 
                     <div class="file-category">
                         <h6>Palm Elements</h6>
                         <ul class="file-list">
-                            <li><a href="assets/phoenixhand/palm_left_new_supports.stl" download></i>palm_left_new_supports.stl</a></li>
-                            <li><a href="assets/phoenixhand/palm_right_new_supports.stl" download></i>palm_right_new_supports.stl</a></li>
-                            <li><a href="assets/phoenixhand/palm_mesh_right_thick.stl" download></i>palm_mesh_right_thick.stl</a></li>
-                            <li><a href="assets/phoenixhand/palm_mesh_right_thin.stl" download></i>palm_mesh_right_thin.stl</a></li>
+                            <li><a href="assets/phoenixhand/palm_left_new_supports.stl" download><i class="bi bi-box me-2"></i>palm_left_new_supports.stl</a></li>
+                            <li><a href="assets/phoenixhand/palm_right_new_supports.stl" download><i class="bi bi-box me-2"></i>palm_right_new_supports.stl</a></li>
+                            <li><a href="assets/phoenixhand/palm_mesh_right_thick.stl" download><i class="bi bi-box me-2"></i>palm_mesh_right_thick.stl</a></li>
+                            <li><a href="assets/phoenixhand/palm_mesh_right_thin.stl" download><i class="bi bi-box me-2"></i>palm_mesh_right_thin.stl</a></li>
                         </ul>
                     </div>
 
                     <div class="file-category">
                         <h6>Pins & Connectors</h6>
                         <ul class="file-list">
-                            <li><a href="assets/phoenixhand/fingertip_pin.stl" download></i>fingertip_pin.stl</a></li>
-                            <li><a href="assets/phoenixhand/knuckle_pin_long.stl" download></i>knuckle_pin_long.stl</a></li>
-                            <li><a href="assets/phoenixhand/knuckle_pin_short.stl" download></i>knuckle_pin_short.stl</a></li>
-                            <li><a href="assets/phoenixhand/swivel_pin_left_JD1.stl" download></i>swivel_pin_left_JD1.stl</a></li>
-                            <li><a href="assets/phoenixhand/swivel_pin_right_JD1.stl" download></i>swivel_pin_right_JD1.stl</a></li>
-                            <li><a href="assets/phoenixhand/thumb_knuckle_pin.stl" download></i>thumb_knuckle_pin.stl</a></li>
-                            <li><a href="assets/phoenixhand/thumb_v2_tensioner_pin.stl" download></i>thumb_v2_tensioner_pin.stl</a></li>
-                            <li><a href="assets/phoenixhand/thumbtip_pin.stl" download></i>thumbtip_pin.stl</a></li>
-                            <li><a href="assets/phoenixhand/wrist_pin_cap.stl" download></i>wrist_pin_cap.stl</a></li>
-                            <li><a href="assets/phoenixhand/wrist_pin_thermo.stl" download></i>wrist_pin_thermo.stl</a></li>
+                            <li><a href="assets/phoenixhand/fingertip_pin.stl" download><i class="bi bi-link-45deg me-2"></i>fingertip_pin.stl</a></li>
+                            <li><a href="assets/phoenixhand/knuckle_pin_long.stl" download><i class="bi bi-link-45deg me-2"></i>knuckle_pin_long.stl</a></li>
+                            <li><a href="assets/phoenixhand/knuckle_pin_short.stl" download><i class="bi bi-link-45deg me-2"></i>knuckle_pin_short.stl</a></li>
+                            <li><a href="assets/phoenixhand/swivel_pin_left_JD1.stl" download><i class="bi bi-link-45deg me-2"></i>swivel_pin_left_JD1.stl</a></li>
+                            <li><a href="assets/phoenixhand/swivel_pin_right_JD1.stl" download><i class="bi bi-link-45deg me-2"></i>swivel_pin_right_JD1.stl</a></li>
+                            <li><a href="assets/phoenixhand/thumb_knuckle_pin.stl" download><i class="bi bi-link-45deg me-2"></i>thumb_knuckle_pin.stl</a></li>
+                            <li><a href="assets/phoenixhand/thumb_v2_tensioner_pin.stl" download><i class="bi bi-link-45deg me-2"></i>thumb_v2_tensioner_pin.stl</a></li>
+                            <li><a href="assets/phoenixhand/thumbtip_pin.stl" download><i class="bi bi-link-45deg me-2"></i>thumbtip_pin.stl</a></li>
+                            <li><a href="assets/phoenixhand/wrist_pin_cap.stl" download><i class="bi bi-link-45deg me-2"></i>wrist_pin_cap.stl</a></li>
+                            <li><a href="assets/phoenixhand/wrist_pin_thermo.stl" download><i class="bi bi-link-45deg me-2"></i>wrist_pin_thermo.stl</a></li>
                         </ul>
                     </div>
 
                     <div class="file-category">
                         <h6>Gauntlet & Mechanics</h6>
                         <ul class="file-list">
-                            <li><a href="assets/phoenixhand/thermo_gauntlet_two_strap_one_row.stl" download></i>thermo_gauntlet...</a></li>
-                            <li><a href="assets/phoenixhand/whippletree_JD3.stl" download></i>whippletree_JD3.stl</a></li>
+                            <li><a href="assets/phoenixhand/thermo_gauntlet_two_strap_one_row.stl" download><i class="bi bi-box me-2"></i>thermo_gauntlet...</a></li>
+                            <li><a href="assets/phoenixhand/whippletree_JD3.stl" download><i class="bi bi-box me-2"></i>whippletree_JD3.stl</a></li>
                         </ul>
                     </div>
 
                     <div class="file-category">
-                        <h6>Accessories</h6>
+                        <h6>Accessories & Extras</h6>
                         <ul class="file-list">
-                            <li><a href="assets/phoenixhand/gripper_box_left.stl" download></i>gripper_box_left.stl</a></li>
-                            <li><a href="assets/phoenixhand/gripper_box_right.stl" download></i>gripper_box_right.stl</a></li>
-                            <li><a href="assets/phoenixhand/Phoenix_Left_Demo_Bar_V1.stl" download></i>Left_Demo_Bar_V1.stl</a></li>
-                            <li><a href="assets/phoenixhand/Phoenix_Right_Demo_Bar_V1.stl" download></i>Right_Demo_Bar_V1.stl</a></li>
-                            <li><a href="assets/phoenixhand/retention_clip.stl" download></i>retention_clip.stl</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="file-category doc-section">
-                        <h6>Guide</h6>
-                        <ul class="file-list doc-list">
-                            <li><a href="assets/phoenixhand/Phoenix_v2_assembly_guide.pdf" target="_blank"></i>Phoenix V2 Assembly Guide</a></li>
+                            <li><a href="assets/phoenixhand/gripper_box_left.stl" download><i class="bi bi-tools me-2"></i>gripper_box_left.stl</a></li>
+                            <li><a href="assets/phoenixhand/gripper_box_right.stl" download><i class="bi bi-tools me-2"></i>gripper_box_right.stl</a></li>
+                            <li><a href="assets/phoenixhand/Phoenix_Left_Demo_Bar_V1.stl" download><i class="bi bi-tools me-2"></i>Left_Demo_Bar_V1.stl</a></li>
+                            <li><a href="assets/phoenixhand/Phoenix_Right_Demo_Bar_V1.stl" download><i class="bi bi-tools me-2"></i>Right_Demo_Bar_V1.stl</a></li>
+                            <li><a href="assets/phoenixhand/retention_clip.stl" download><i class="bi bi-tools me-2"></i>retention_clip.stl</a></li>
                         </ul>
                     </div>
 
@@ -407,6 +429,65 @@
         </div>
     </div>
 
+    <div class="modal fade" id="imageLightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto shadow-none" style="filter: invert(1);" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0">
+                    <img id="lightboxImage" src="" class="img-fluid rounded shadow-lg" alt="Enlarged image">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 1. Lightbox Logic ---
+            const lightboxModal = new bootstrap.Modal(document.getElementById('imageLightboxModal'));
+            const lightboxImg = document.getElementById('lightboxImage');
+            
+            // Make carousel images click to enlarge
+            const carouselImages = document.querySelectorAll('.enlargeable-img');
+            carouselImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightboxImg.src = this.src;
+                    lightboxModal.show();
+                });
+            });
+
+            // --- 2. Carousel Caption Fade Logic ---
+            const clipCarousel = document.getElementById('clipCarousel');
+            let fadeTimeout;
+
+            function triggerCaptionFade() {
+                clearTimeout(fadeTimeout);
+                
+                // Reset all captions to be fully visible immediately
+                document.querySelectorAll('#clipCarousel .carousel-caption').forEach(cap => {
+                    cap.style.transition = 'none';
+                    cap.style.opacity = '1';
+                });
+                
+                // Set a timeout to fade out the ACTIVE caption after 5 seconds
+                fadeTimeout = setTimeout(() => {
+                    const activeCaption = document.querySelector('#clipCarousel .carousel-item.active .carousel-caption');
+                    if(activeCaption) {
+                        activeCaption.style.transition = 'opacity 0.6s ease-out';
+                        activeCaption.style.opacity = '0';
+                    }
+                }, 5000);
+            }
+
+            // Trigger the fade timer when the page loads
+            triggerCaptionFade();
+            
+            // Re-trigger the fade timer every time the carousel slide changes
+            clipCarousel.addEventListener('slid.bs.carousel', triggerCaptionFade);
+        });
+    </script>
 </body>
 </html>
