@@ -21,11 +21,11 @@
         .file-list li a:hover { background-color: #e9ecef; border-color: #0d6efd; transform: translateX(3px); }
 
         /* Carousel Enhancements */
-        .carousel-item img {
+        .carousel-item img, .enlargeable-img {
             cursor: pointer; 
             transition: opacity 0.2s ease-in-out;
         }
-        .carousel-item img:hover {
+        .carousel-item img:hover, .enlargeable-img:hover {
             opacity: 0.9;
         }
     </style>
@@ -142,24 +142,38 @@
                                     <ul class="mb-0 small">
                                         <li><strong>Material:</strong> PLA</li>
                                         <li><strong>Layer Height:</strong> 0.10mm (Chosen over the standard 0.20mm structural profile to yield a much smoother cosmetic surface finish).</li>
-                                        <li><strong>Infill:</strong> 15%</li>
-                                        <li><strong>Supports:</strong> The majority of the parts did not require additional generated supports, relying purely on the model's built-in optimized geometry.</li>
-                                        <li><strong>Ironing:</strong> Enabled for all top surfaces to further enhance the aesthetic smoothness of the outer shells.</li>
+                                        <li><strong>Infill:</strong> 20% (Adjusted for structural integrity on the finger segments).</li>
+                                        <li><strong>Supports:</strong> "For support enforcers only" on the majority of the hand, with specific auto-generated supports for the overhanging geometries on the finger parts.</li>
+                                        <li><strong>Ironing:</strong> Enabled for top surfaces to further enhance the aesthetic smoothness.</li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="card border-0 shadow-sm mb-5">
-                                <img src="assets/phoenix_hand_slicer_view.jpg" class="card-img-top rounded-top" alt="PrusaSlicer screenshot showing multiple build plates covered in orange 3D printed prosthetic hand parts">
-                                <div class="card-body bg-white py-3">
-                                    <small class="text-muted fw-bold d-block text-center mb-1"><i class="bi bi-layers-half me-2"></i>Slicing and Print Preparation</small>
-                                    <small class="text-muted text-center d-block">Slicer view of multiple build plates for a 150% scale Phoenix Hand build.</small>
-                                </div>
-                            </div>
                             <div class="row g-4 mb-5">
                                 <div class="col-md-6">
                                     <div class="card border-0 shadow-sm h-100">
-                                        <img src="assets/wrist_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Blue 3D printed wrist part on Prusa print bed">
+                                        <img src="assets/slice_view_parts.png" class="card-img-top rounded-top enlargeable-img" alt="PrusaSlicer screenshot showing multiple build plates">
+                                        <div class="card-body bg-white py-3">
+                                            <small class="text-muted fw-bold d-block text-center mb-1"><i class="bi bi-grid me-2"></i>Plater Layout</small>
+                                            <small class="text-muted text-center d-block">Arranging multiple build plates for a 150% scale Phoenix Hand build.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/finger parts.jpg" class="card-img-top rounded-top enlargeable-img" alt="PrusaSlicer screenshot showing sliced finger parts with supports">
+                                        <div class="card-body bg-white py-3">
+                                            <small class="text-muted fw-bold d-block text-center mb-1"><i class="bi bi-layers me-2"></i>Sliced Preview</small>
+                                            <small class="text-muted text-center d-block">Detailed sliced view showing layer lines, generated supports (green), and print time estimates.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-4 mb-5">
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <img src="assets/wrist_assembly.jpg" class="card-img-top rounded border-bottom enlargeable-img" style="height: 250px; object-fit: cover;" alt="Blue 3D printed wrist part on Prusa print bed">
                                         <div class="card-body bg-light text-center py-3">
                                             <small class="text-muted fw-bold d-block"><i class="bi bi-printer me-2"></i>Printing the Gauntlet</small>
                                             <small class="text-muted">The wrist component finishing on the Prusa Mini+.</small>
@@ -168,7 +182,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card border-0 shadow-sm h-100">
-                                        <img src="assets/parts_before_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Disassembled pink finger parts">
+                                        <img src="assets/parts_before_assembly.jpg" class="card-img-top rounded border-bottom enlargeable-img" style="height: 250px; object-fit: cover;" alt="Disassembled pink finger parts">
                                         <div class="card-body bg-light text-center py-3">
                                             <small class="text-muted fw-bold d-block"><i class="bi bi-box-seam me-2"></i>Raw Components</small>
                                             <small class="text-muted">Pink finger segments and snap-pins post-printing.</small>
@@ -177,7 +191,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card border-0 shadow-sm h-100">
-                                        <img src="assets/parts_after_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Assembled pink fingers">
+                                        <img src="assets/parts_after_assembly.jpg" class="card-img-top rounded border-bottom enlargeable-img" style="height: 250px; object-fit: cover;" alt="Assembled pink fingers">
                                         <div class="card-body bg-light text-center py-3">
                                             <small class="text-muted fw-bold d-block"><i class="bi bi-tools me-2"></i>Sub-Assembly</small>
                                             <small class="text-muted">Fingers and knuckles assembled using the 3D printed pins.</small>
@@ -186,7 +200,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card border-0 shadow-sm h-100">
-                                        <img src="assets/final_assembly.jpg" class="card-img-top rounded border-bottom" style="height: 250px; object-fit: cover;" alt="Fully assembled 3D printed hand with strings">
+                                        <img src="assets/final_assembly.jpg" class="card-img-top rounded border-bottom enlargeable-img" style="height: 250px; object-fit: cover;" alt="Fully assembled 3D printed hand with strings">
                                         <div class="card-body bg-light text-center py-3">
                                             <small class="text-muted fw-bold d-block"><i class="bi bi-check-circle me-2"></i>Final Stringing</small>
                                             <small class="text-muted">Routing the tensioning cables through the tensioner box.</small>
@@ -310,13 +324,13 @@
                             <div class="row mt-4">
                                 <div class="col-md-6 mb-4 mb-md-0">
                                     <figure class="figure w-100">
-                                        <img src="assets/hand_with_clip.jpg" class="figure-img img-fluid rounded shadow-sm w-100" alt="Top view of the smartphone mount attached to the Phoenix Hand">
-                                        <figcaption class="figure-caption text-center">Top view: Mount securely snapped onto the ring and middle finger knuckles.</figcaption>
+                                        <img src="assets/phoenix_hand_with_phone.jpg" class="figure-img img-fluid rounded shadow-sm w-100 enlargeable-img" alt="Top view of the smartphone mount attached to the Phoenix Hand holding a phone">
+                                        <figcaption class="figure-caption text-center">Top view: Mount securely holding the phone via the ring and middle finger knuckles.</figcaption>
                                     </figure>
                                 </div>
                                 <div class="col-md-6">
                                     <figure class="figure w-100">
-                                        <img src="assets/hand_with_clip_underside.jpg" class="figure-img img-fluid rounded shadow-sm w-100" alt="Bottom view of a hand wearing the prosthesis with the mount attached">
+                                        <img src="assets/phoenix_hand_with_phone_backside.jpg" class="figure-img img-fluid rounded shadow-sm w-100 enlargeable-img" alt="Bottom view of a hand wearing the prosthesis with the mount attached">
                                         <figcaption class="figure-caption text-center">Bottom view: The attachment maintains perfect clearance for the tension lines.</figcaption>
                                     </figure>
                                 </div>
@@ -374,8 +388,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
-                    
-                    <div class="file-category">
+                     <div class="file-category">
                         <h6>Fingers & Thumb</h6>
                         <ul class="file-list">
                             <li><a href="assets/phoenixhand/finger_phalanx.stl" download><i class="bi bi-box me-2"></i>finger_phalanx.stl</a></li>
@@ -430,7 +443,6 @@
                             <li><a href="assets/phoenixhand/retention_clip.stl" download><i class="bi bi-tools me-2"></i>retention_clip.stl</a></li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
