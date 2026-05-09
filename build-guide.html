@@ -51,10 +51,13 @@
                 <p class="lead fw-normal text-muted mb-4">Accessible Gaming Mouse & Foot Pedal Setup</p>
                 
                 <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <img src="assets/hero-image.jpg" alt="Final Assembled Project" class="hero-img shadow-lg border">
-                        <p class="text-muted mt-3 small italic">Final assembly showing the handpiece interface and footmount pedals.</p>
-                    </div>
+    <div class="col-lg-10">
+        <div class="shadow-lg border" style="aspect-ratio: 16 / 9; overflow: hidden; border-radius: 1rem; position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#heroModal" title="Click to enlarge">
+            <img src="assets/hero-image.jpg" alt="Final Assembled Project" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+        </div>
+        <p class="text-muted mt-3 small fst-italic">Final assembly showing the handpiece interface and footmount pedals. Click to enlarge.</p>
+    </div>
+</div>
                 </div>
             </div>
 
@@ -203,4 +206,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<div class="modal fade" id="heroModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="assets/hero-image.jpg" alt="Final Assembled Project Full Size" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 </html>
