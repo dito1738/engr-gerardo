@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Build Guide: Accessible Mouse Setup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; padding-top: 56px; }
+        .step-number { background-color: #0d6efd; color: white; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; flex-shrink: 0; }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container px-5">
+            <a class="navbar-brand fw-bold" href="index.html">[Your Name]</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><h6 class="dropdown-header">Spring 2026</h6></li>
+                            <li><a class="dropdown-item" href="projects.html"><strong>Project 1:</strong> 3D Printing</a></li>
+                            <li><a class="dropdown-item" href="project-2.html"><strong>Project 2:</strong> Remix & CAD</a></li>
+                            <li><a class="dropdown-item" href="project-3.html"><strong>Project 3:</strong> Form & Fit (Robot)</a></li>
+                            <li><a class="dropdown-item" href="project-4.html"><strong>Project 4:</strong> Assistive Tech</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="project-5.html"><strong>Project 5:</strong> Capstone (Stage 1)</a></li>
+                            <li><a class="dropdown-item" href="project-5-2.html"><strong>Project 5:</strong> Capstone (Stage 2 & Final)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container px-5 my-5">
+            
+            <div class="text-center mb-5">
+                <h1 class="fw-bolder">Open-Source Build Guide</h1>
+                <p class="lead fw-normal text-muted mb-0">Accessible Gaming Mouse & Foot Pedal Setup</p>
+            </div>
+
+            <div class="card bg-white shadow-sm border-0 mb-5">
+                <div class="card-body p-5 text-center">
+                    <h4 class="fw-bold mb-4">Required 3D Print Files</h4>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="assets/YOUR_FIRST_FILE.stl" download class="btn btn-primary shadow-sm px-4">
+                            <i class="bi bi-download me-2"></i> Download Handpiece STL
+                        </a>
+                        <a href="assets/YOUR_SECOND_FILE.stl" download class="btn btn-primary shadow-sm px-4">
+                            <i class="bi bi-download me-2"></i> Download Footmount STL
+                        </a>
+                    </div>
+                    <p class="text-muted small mt-3 mb-0">*The mouse bottom is an open-source Bambu file. <a href="#">Link to Bambu original here</a>.</p>
+                </div>
+            </div>
+
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="sticky-top" style="top: 100px;">
+                        
+                        <div class="card bg-white shadow-sm border-0 mb-4">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold text-primary mb-3"><i class="bi bi-shield-check me-2"></i>Durability Specs</h5>
+                                <h6 class="fw-bold mb-2">Handpiece:</h6>
+                                <ul class="small text-muted mb-3">
+                                    <li><strong>Top-Down Force:</strong> 500N (Max) - No break</li>
+                                    <li><strong>Top Side Wall:</strong> 400N - Break</li>
+                                    <li><strong>Bottom Side Wall:</strong> 240N - Break</li>
+                                    <li><strong>Drop Test:</strong> Survived stairs</li>
+                                </ul>
+                                <h6 class="fw-bold mb-2">Mousepiece:</h6>
+                                <ul class="small text-muted mb-0">
+                                    <li><strong>Top-Down:</strong> 50N on battery section</li>
+                                    <li><strong>Body:</strong> Hard to break manually</li>
+                                    <li><strong>Note:</strong> Unlikely to take direct force</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white shadow-sm border-0 mb-4">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold text-primary mb-3"><i class="bi bi-list-check me-2"></i>Bill of Materials</h5>
+                                <ul class="small text-muted mb-0">
+                                    <li class="mb-1">1x Bambu Wireless Mouse Kit</li>
+                                    <li class="mb-1">2x PCB Fiber Boards (Identical dims)</li>
+                                    <li class="mb-1">2x Microswitch Buttons</li>
+                                    <li class="mb-1">Electrical Wire</li>
+                                    <li class="mb-1">Soldering Kit</li>
+                                    <li class="mb-1">PLA or PETG Filament</li>
+                                    <li class="mb-1">Adhesive (Glue/Epoxy)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="card bg-white shadow-sm border-0">
+                        <div class="card-body p-5">
+                            <h3 class="fw-bolder mb-4 border-bottom pb-3">Step-by-Step Assembly</h3>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">1</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Print the Components</h5>
+                                    <p class="text-muted">3D print the custom handpiece and the modified mouse bottom housing using PLA or PETG.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">2</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Measure & Print Footmount</h5>
+                                    <p class="text-muted">Measure the dimensions of your PCB fiber boards. Update the CAD for the footmount to ensure cutouts match your boards exactly (leave a minimum tolerance of ~3mm). Print the footmount.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">3</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Assemble Motherboard</h5>
+                                    <p class="text-muted">Assemble the core motherboard of the Bambu wireless kit according to their standard instructions.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">4</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Desolder Standard Switches</h5>
+                                    <p class="text-muted">Desolder and remove the left and right click buttons from the Bambu motherboard.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">5</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Attach Extension Wires</h5>
+                                    <p class="text-muted">Solder two wires into each side of the motherboard where the original buttons were removed.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">6</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Prepare Foot Pedal Boards</h5>
+                                    <p class="text-muted">Solder one replacement microswitch button onto each of your two PCB fiber boards.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">7</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Route & Complete Circuit</h5>
+                                    <p class="text-muted">Run the wires through the routing holes in the handpiece and down into the footmount. Solder the wires to the buttons on the fiber boards to close the circuit.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">8</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Test the Circuit</h5>
+                                    <p class="text-muted">Turn on the mouse and verify that the left and right click buttons on your foot pedals work correctly on a computer.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number me-3">9</div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Final Assembly</h5>
+                                    <p class="text-muted">Glue the fiber boards into the footmount cutouts. Glue the motherboard to the mouse bottom. Finally, glue the handpiece to the mouse bottom where it clips in.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="step-number bg-success me-3"><i class="bi bi-check-lg"></i></div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Play!</h5>
+                                    <p class="text-muted">Compete in FPS games with your new hands-free clicking setup.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mt-5 text-center">
+                        <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="project-5-2.html">
+                            <i class="bi bi-arrow-left me-2"></i> Back to Project Writeup
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
