@@ -11,6 +11,7 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; padding-top: 56px; }
         .step-number { background-color: #0d6efd; color: white; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; flex-shrink: 0; }
+        .hero-img { width: 100%; max-height: 500px; object-fit: cover; border-radius: 1rem; }
     </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
@@ -46,8 +47,15 @@
         <div class="container px-5 my-5">
             
             <div class="text-center mb-5">
-                <h1 class="fw-bolder">Open-Source Build Guide</h1>
-                <p class="lead fw-normal text-muted mb-0">Accessible Gaming Mouse & Foot Pedal Setup</p>
+                <h1 class="fw-bolder display-5">Open-Source Build Guide</h1>
+                <p class="lead fw-normal text-muted mb-4">Accessible Gaming Mouse & Foot Pedal Setup</p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <img src="assets/hero-image.jpg" alt="Final Assembled Project" class="hero-img shadow-lg border">
+                        <p class="text-muted mt-3 small italic">Final assembly showing the handpiece interface and footmount pedals.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="card bg-white shadow-sm border-0 mb-5">
@@ -61,20 +69,18 @@
                             <i class="bi bi-download me-2"></i> Download Footmount STL
                         </a>
                     </div>
-                    <p class="text-muted small mt-3 mb-0">*The mouse bottom is an open-source Bambu file. <a href="https://us.store.bambulab.com/products/wireless-mouse-components-kit-002?srsltid=AfmBOorUOL5Xu0jPYOQ7EIUov6OQJ3okD6b_AEjqmF8xet8xa6yi1cQl" target="_blank">Link to Bambu original here</a>.</p>
+                    <p class="text-muted small mt-3 mb-0">*The mouse bottom is an open-source Bambu file. <a href="https://makerworld.com/en/models/13716" target="_blank">Link to Bambu original here</a>.</p>
                 </div>
             </div>
 
             <div class="card bg-white shadow-sm border-0 mb-5">
                 <div class="card-body p-4 p-md-5">
                     <h4 class="fw-bold mb-3 text-center"><i class="bi bi-layers me-2 text-primary"></i>Recommended Slicer Orientation</h4>
-                    
                     <div class="text-center mb-4">
                         <span class="badge bg-secondary px-3 py-2 fw-normal fs-6">
-                            <strong>Global Settings:</strong> Prusa MK4 (0.4mm nozzle) &bull; 0.20mm SPEED &bull; Generic PLA &bull; 15% Infill
+                            <strong>Global Settings:</strong> Prusa MK4 (0.4mm nozzle) &bull; 0.20mm SPEED &bull; PLA &bull; 15% Infill
                         </span>
                     </div>
-
                     <div class="row g-4">
                         <div class="col-md-6 text-center">
                             <img src="assets/hand-slice.png" alt="Handpiece Slicer View" class="img-fluid rounded shadow-sm mb-3 border">
@@ -82,8 +88,6 @@
                             <ul class="small text-muted d-inline-block text-start mb-0">
                                 <li><strong>Time:</strong> 2h 49m</li>
                                 <li><strong>Material:</strong> 104.46g (35.03m)</li>
-                                <li><strong>Dimensions:</strong> 105.4 x 153.0 x 76.9 mm</li>
-                                <li><strong>Supports:</strong> For enforcers only</li>
                             </ul>
                         </div>
                         <div class="col-md-6 text-center">
@@ -92,8 +96,6 @@
                             <ul class="small text-muted d-inline-block text-start mb-0">
                                 <li><strong>Time:</strong> 3h 4m</li>
                                 <li><strong>Material:</strong> 140.50g (47.11m)</li>
-                                <li><strong>Dimensions:</strong> 245.2 x 90.0 x 34.1 mm</li>
-                                <li><strong>Supports:</strong> For enforcers only</li>
                             </ul>
                         </div>
                     </div>
@@ -103,138 +105,97 @@
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <div class="sticky-top" style="top: 100px;">
-                        
                         <div class="card bg-white shadow-sm border-0 mb-4">
                             <div class="card-body p-4">
                                 <h5 class="fw-bold text-primary mb-3"><i class="bi bi-shield-check me-2"></i>Durability Specs</h5>
-                                <h6 class="fw-bold mb-2">Handpiece:</h6>
-                                <ul class="small text-muted mb-3">
-                                    <li><strong>Top-Down Force:</strong> 500N (Max) - No break</li>
-                                    <li><strong>Top Side Wall:</strong> 400N - Break</li>
-                                    <li><strong>Bottom Side Wall:</strong> 240N - Break</li>
-                                    <li><strong>Drop Test:</strong> Survived stairs</li>
-                                </ul>
-                                <h6 class="fw-bold mb-2">Mousepiece:</h6>
-                                <ul class="small text-muted mb-0">
-                                    <li><strong>Top-Down:</strong> 50N on battery section</li>
-                                    <li><strong>Body:</strong> Hard to break manually</li>
-                                    <li><strong>Note:</strong> Unlikely to take direct force</li>
-                                </ul>
+                                <h6 class="fw-bold mb-1 small text-dark">Handpiece:</h6>
+                                <p class="small text-muted mb-3">500N Top-down (no break), 400N side wall (break), survived stair drop test.</p>
+                                <h6 class="fw-bold mb-1 small text-dark">Mousepiece:</h6>
+                                <p class="small text-muted mb-0">50N battery section limit. Housing is durable but not intended for heavy force.</p>
                             </div>
                         </div>
 
                         <div class="card bg-white shadow-sm border-0 mb-4">
                             <div class="card-body p-4">
                                 <h5 class="fw-bold text-primary mb-3"><i class="bi bi-list-check me-2"></i>Bill of Materials</h5>
-                                <ul class="small text-muted mb-0">
-                                    <li class="mb-1">1x Bambu Wireless Mouse Kit</li>
-                                    <li class="mb-1">2x PCB Fiber Boards (Identical dims)</li>
-                                    <li class="mb-1">2x Microswitch Buttons</li>
-                                    <li class="mb-1">Electrical Wire</li>
-                                    <li class="mb-1">Soldering Kit</li>
-                                    <li class="mb-1">PLA or PETG Filament</li>
-                                    <li class="mb-1">Adhesive (Glue/Epoxy)</li>
+                                <ul class="small text-muted mb-0" style="line-height: 1.8;">
+                                    <li>1x <a href="https://us.store.bambulab.com/products/wireless-mouse-components-kit-002" target="_blank" class="text-decoration-none">Bambu Mouse Kit <i class="bi bi-box-arrow-up-right"></i></a></li>
+                                    <li>2x <a href="https://www.amazon.com/s?k=pcb+prototype+board+kit" target="_blank" class="text-decoration-none">PCB Fiber Boards <i class="bi bi-box-arrow-up-right"></i></a></li>
+                                    <li>2x <a href="https://www.amazon.com/s?k=microswitch+assortment+kit" target="_blank" class="text-decoration-none">Microswitches <i class="bi bi-box-arrow-up-right"></i></a></li>
+                                    <li><a href="https://www.amazon.com/s?k=hookup+wire+kit+22awg" target="_blank" class="text-decoration-none">22 AWG Wire <i class="bi bi-box-arrow-up-right"></i></a></li>
+                                    <li><a href="https://www.amazon.com/s?k=soldering+iron+starter+kit" target="_blank" class="text-decoration-none">Soldering Kit <i class="bi bi-box-arrow-up-right"></i></a></li>
+                                    <li><a href="https://www.amazon.com/s?k=PETG+filament" target="_blank" class="text-decoration-none">PLA/PETG Filament <i class="bi bi-box-arrow-up-right"></i></a></li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="col-lg-8">
+                    
+                    <div class="alert alert-warning border-0 shadow-sm mb-4 p-4">
+                        <div class="d-flex">
+                            <div class="me-3 fs-3"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Documentation Note</h6>
+                                <p class="small mb-0 text-dark">This build guide is currently text-based. Step-by-step photographic assembly instructions are currently in production and will be added soon. Please read each step carefully.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card bg-white shadow-sm border-0">
                         <div class="card-body p-5">
                             <h3 class="fw-bolder mb-4 border-bottom pb-3">Step-by-Step Assembly</h3>
 
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">1</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Print the Components</h5>
-                                    <p class="text-muted">3D print the custom handpiece and the modified mouse bottom housing using PLA or PETG.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Print Components</h5><p class="text-muted">Print the custom handpiece and modified mouse bottom using PLA or PETG.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">2</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Measure & Print Footmount</h5>
-                                    <p class="text-muted">Measure the dimensions of your PCB fiber boards. Update the CAD for the footmount to ensure cutouts match your boards exactly (leave a minimum tolerance of ~3mm). Print the footmount.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Measure & Print Footmount</h5><p class="text-muted">Measure your PCB fiber boards and adjust the footmount CAD cutouts (3mm tolerance) before printing.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">3</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Assemble Motherboard</h5>
-                                    <p class="text-muted">Assemble the core motherboard of the Bambu wireless kit according to their standard instructions.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Assemble Motherboard</h5><p class="text-muted">Follow standard Bambu Wireless Kit instructions for the base motherboard setup.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">4</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Desolder Standard Switches</h5>
-                                    <p class="text-muted">Desolder and remove the left and right click buttons from the Bambu motherboard.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Desolder Switches</h5><p class="text-muted">Carefully remove the built-in left and right click microswitches from the Bambu motherboard.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">5</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Attach Extension Wires</h5>
-                                    <p class="text-muted">Solder two wires into each side of the motherboard where the original buttons were removed.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Attach Extension Wires</h5><p class="text-muted">Solder extension wires to the contact pads where the original buttons were located.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">6</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Prepare Foot Pedal Boards</h5>
-                                    <p class="text-muted">Solder one replacement microswitch button onto each of your two PCB fiber boards.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Prepare Pedal Boards</h5><p class="text-muted">Solder your new microswitch buttons onto the two PCB fiber boards.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">7</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Route & Complete Circuit</h5>
-                                    <p class="text-muted">Run the wires through the routing holes in the handpiece and down into the footmount. Solder the wires to the buttons on the fiber boards to close the circuit.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Route & Solder</h5><p class="text-muted">Route wires through the handpiece/footmount holes and solder them to the pedal boards.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">8</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Test the Circuit</h5>
-                                    <p class="text-muted">Turn on the mouse and verify that the left and right click buttons on your foot pedals work correctly on a computer.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Test Functionality</h5><p class="text-muted">Verify the mouse registers clicks when the pedals are pressed before final gluing.</p></div>
                             </div>
-
                             <div class="d-flex mb-4">
                                 <div class="step-number me-3">9</div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Final Assembly</h5>
-                                    <p class="text-muted">Glue the fiber boards into the footmount cutouts. Glue the motherboard to the mouse bottom. Finally, glue the handpiece to the mouse bottom where it clips in.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1">Final Glue-Up</h5><p class="text-muted">Secure the boards into the footmount and glue the handpiece to the mouse bottom housing.</p></div>
                             </div>
-
-                            <div class="d-flex mb-4">
+                            <div class="d-flex mb-0">
                                 <div class="step-number bg-success me-3"><i class="bi bi-check-lg"></i></div>
-                                <div>
-                                    <h5 class="fw-bold mb-1">Play!</h5>
-                                    <p class="text-muted">Compete in FPS games with your new hands-free clicking setup.</p>
-                                </div>
+                                <div><h5 class="fw-bold mb-1 text-success">Complete!</h5><p class="text-muted">You are now ready to play FPS games with your new setup.</p></div>
                             </div>
 
                         </div>
                     </div>
 
                     <div class="mt-5 text-center">
-                        <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="project-5-2.html">
+                        <a class="btn btn-outline-secondary btn-lg px-4 rounded-pill shadow-sm" href="project-5-2.html">
                             <i class="bi bi-arrow-left me-2"></i> Back to Project Writeup
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
